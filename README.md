@@ -2,8 +2,8 @@ Code source du [module 3](https://mtes-mct.github.io/parcours-r/m3/index.html) d
 
 Objectifs du module : 
 
-- Rappels théoriques sur les méthodes usuelles de statistiques uni- et bi-variées
+- Rappels théoriques sur les méthodes usuelles de statistiques uni- et bi-variées ;
 
-- Mise en œuvre avec R
+- Mise en œuvre avec R ;
 
-- Interprétation
+- Interprétation.
