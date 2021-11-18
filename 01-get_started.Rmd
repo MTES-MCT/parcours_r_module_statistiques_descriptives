@@ -72,9 +72,14 @@ library (DT)
 library (plotly)
 library (grid)
 
-dat <- read.csv (file = "data/Base_synth_territoires.csv", sep = ';',
-                 dec = ',', colClasses = c ("REG" = "factor")) %>% 
-      select (-starts_with ("ET"))
+dat <- read.csv (
+  file = "data/Base_synth_territoires.csv",
+  sep = ';',
+  dec = ',',
+  colClasses = c ("REG" = "factor"),
+  fileEncoding = "WINDOWS-1252"
+) %>%
+  select (-starts_with ("ET"))
 
 ```
 
