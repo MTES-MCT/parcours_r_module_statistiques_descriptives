@@ -115,10 +115,9 @@
     },
     "XML": {
       "Package": "XML",
-      "Version": "3.99-0.6",
+      "Version": "3.99-0.12",
       "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "59b7d0a3d18303ae30ba1246e77faa83"
+      "Repository": "RSPM"
     },
     "abind": {
       "Package": "abind",
