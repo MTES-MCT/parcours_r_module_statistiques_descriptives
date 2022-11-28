@@ -711,10 +711,9 @@
     },
     "lwgeom": {
       "Package": "lwgeom",
-      "Version": "0.2-5",
+      "Version": "0.2-10",
       "Source": "Repository",
       "Repository": "RSPM",
-      "Hash": "cf96b08482dfbed1b7ab7d0ba4395077"
     },
     "magrittr": {
       "Package": "magrittr",
