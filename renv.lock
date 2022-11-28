@@ -81,10 +81,9 @@
     },
     "RPostgreSQL": {
       "Package": "RPostgreSQL",
-      "Version": "0.6-2",
+      "Version": "0.7-4",
       "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "82cb7737c081ed6b5e528a37f536d864"
+      "Repository": "RSPM"
     },
     "Rcpp": {
       "Package": "Rcpp",
