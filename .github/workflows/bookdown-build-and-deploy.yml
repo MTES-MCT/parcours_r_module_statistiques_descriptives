@@ -1,0 +1,16 @@
+name: Déploiement de parcours_r_module_statistiques_descriptives
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy-bookdown:
+    name: Build and bookdown
+    uses: MTES-MCT/parcours-r/.github/workflows/bookdown-build-from-desc-and-deploy.yml@master
+    with:
+      r_version: '4.4.1'
