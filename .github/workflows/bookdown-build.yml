@@ -1,0 +1,14 @@
+name: Test compilation de parcours_r_module_statistiques_descriptives
+
+on:
+  pull_request:
+    branches: [main, master, dev, dev-ci]
+    
+  workflow_dispatch:
+
+jobs:
+  build-bookdown:
+    name: Build bookdown
+    uses: MTES-MCT/parcours-r/.github/workflows/bookdown-build-from-desc.yml@master
+    with:
+      r_version: '4.4.1'
