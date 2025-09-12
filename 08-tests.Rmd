@@ -363,11 +363,11 @@ Afin de savoir quel test s'applique dans chaque situation :
 
 ```{r, echo= FALSE}
 
-# fichiers dans Graphiques_tests
+# fichiers dans data/
 library(visNetwork)
 
-point <- read.csv2(file = "Graphiques_tests/noeuds.csv", encoding = "UTF-8")
-lien <- read.csv2(file = "Graphiques_tests/liens.csv", encoding = "UTF-8")
+point <- read.csv2(file = "data/noeuds.csv", encoding = "UTF-8")
+lien <- read.csv2(file = "data/liens.csv", encoding = "UTF-8")
 
 
 graph <- visNetwork(point, lien, height = '1000px', width = '100%') %>% 
