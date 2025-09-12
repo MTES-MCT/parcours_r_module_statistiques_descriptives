@@ -250,7 +250,10 @@ ggplotly(g) # ajout de dynamisme
 ```
 
 ```{r}
-res <- t.test(log_pop ~ annee, data = data_test_d, paired = TRUE)
+# on repasse au format large
+data_test_d2 <- data_test_d %>% 
+  pivot_wider(names_from = "annee", values_from = c("log_pop", "population"))
+res <- t.test(data_test_d2$log_pop_2009, data_test_d2$log_pop_2014, paired = TRUE)
 res
 ```
 
@@ -267,7 +270,7 @@ ggplotly(g)
 ```
 
 ```{r}
-res <- wilcox.test(population ~ annee, data = data_test_d, paired = TRUE)
+res <- wilcox.test(data_test_d2$log_pop_2009, data_test_d2$log_pop_2014, paired = TRUE)
 res
 
 ```
