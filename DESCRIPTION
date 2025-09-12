@@ -23,5 +23,7 @@ Imports:
   stringi,
   tidyverse, 
   visNetwork
+Remotes: 
+    maeltheuliere/COGiter
 License: MIT
 
