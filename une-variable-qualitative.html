@@ -4,36 +4,36 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapitre 4 Une variable qualitative | Statistiques descriptives</title>
-  <meta name="description" content="Chapitre 4 Une variable qualitative | Statistiques descriptives avec R (module 3)" />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <title>Chapitre 5 Une variable qualitative | Statistiques descriptives</title>
+  <meta name="description" content="Chapitre 5 Une variable qualitative | Statistiques descriptives avec R (module 3)" />
+  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapitre 4 Une variable qualitative | Statistiques descriptives" />
+  <meta property="og:title" content="Chapitre 5 Une variable qualitative | Statistiques descriptives" />
   <meta property="og:type" content="book" />
   
-  
-  <meta property="og:description" content="Chapitre 4 Une variable qualitative | Statistiques descriptives avec R (module 3)" />
+  <meta property="og:description" content="Chapitre 5 Une variable qualitative | Statistiques descriptives avec R (module 3)" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapitre 4 Une variable qualitative | Statistiques descriptives" />
+  <meta name="twitter:title" content="Chapitre 5 Une variable qualitative | Statistiques descriptives" />
   
-  <meta name="twitter:description" content="Chapitre 4 Une variable qualitative | Statistiques descriptives avec R (module 3)" />
+  <meta name="twitter:description" content="Chapitre 5 Une variable qualitative | Statistiques descriptives avec R (module 3)" />
   
 
 <meta name="author" content="Solène Colin, Vivien Roussez &amp; Pascal Irz" />
 
 
-<meta name="date" content="2020-03-02" />
+<meta name="date" content="2025-09-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="quelques-préliminaires.html"/>
+<link rel="prev" href="une-variable-quantitative.html"/>
 <link rel="next" href="deux-variables-quantitatives.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,44 +49,49 @@
 
 
 
-
-<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.12/datatables.js"></script>
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
-<script src="libs/plotly-binding-4.9.2/plotly.js"></script>
+<script src="libs/datatables-binding-0.34.0/datatables.js"></script>
+<link href="libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="libs/plotly-binding-4.11.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
-<link href="libs/vis-4.20.1/vis.css" rel="stylesheet" />
-<script src="libs/vis-4.20.1/vis.min.js"></script>
-<script src="libs/visNetwork-binding-2.0.9/visNetwork.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<link href="libs/vis-9.1.0/vis-network.min.css" rel="stylesheet" />
+<script src="libs/vis-9.1.0/vis-network.min.js"></script>
+<script src="libs/visNetwork-binding-2.1.4/visNetwork.js"></script>
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -95,15 +100,15 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -116,7 +121,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -128,6 +133,11 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -147,125 +157,153 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Statistiques descriptives avec R</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#le-parcours-de-formation"><i class="fa fa-check"></i><b>1.1</b> Le parcours de formation</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#objectif-du-module-3"><i class="fa fa-check"></i><b>1.2</b> Objectif du module 3</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#notions-et-méthodes-présentées"><i class="fa fa-check"></i><b>1.3</b> Notions et méthodes présentées</a><ul>
-<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#analyse-univariée-dune-variable-quantitative"><i class="fa fa-check"></i><b>1.3.1</b> Analyse univariée d’une variable quantitative</a></li>
-<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#analyse-univariée-dune-variable-qualitative"><i class="fa fa-check"></i><b>1.3.2</b> Analyse univariée d’une variable qualitative</a></li>
+<li class="chapter" data-level="1.3" data-path="04-une-variable-qualitative.html"><a href="#notions-et-m%C3%A9thodes-pr%C3%A9sent%C3%A9es"><i class="fa fa-check"></i><b>1.3</b> Notions et méthodes présentées</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="04-une-variable-qualitative.html"><a href="#analyse-univari%C3%A9e-dune-variable-quantitative"><i class="fa fa-check"></i><b>1.3.1</b> Analyse univariée d’une variable quantitative</a></li>
+<li class="chapter" data-level="1.3.2" data-path="04-une-variable-qualitative.html"><a href="#analyse-univari%C3%A9e-dune-variable-qualitative"><i class="fa fa-check"></i><b>1.3.2</b> Analyse univariée d’une variable qualitative</a></li>
 <li class="chapter" data-level="1.3.3" data-path="index.html"><a href="index.html#relation-entre-2-variables-quantitatives"><i class="fa fa-check"></i><b>1.3.3</b> Relation entre 2 variables quantitatives</a></li>
 <li class="chapter" data-level="1.3.4" data-path="index.html"><a href="index.html#relation-entre-2-variables-qualitatives"><i class="fa fa-check"></i><b>1.3.4</b> Relation entre 2 variables qualitatives</a></li>
 <li class="chapter" data-level="1.3.5" data-path="index.html"><a href="index.html#relation-entre-une-variable-qualitative-et-une-variable-quantitative"><i class="fa fa-check"></i><b>1.3.5</b> Relation entre une variable qualitative et une variable quantitative</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#fondamentaux-r-présentés"><i class="fa fa-check"></i><b>1.4</b> Fondamentaux R présentés</a></li>
+<li class="chapter" data-level="1.4" data-path="04-une-variable-qualitative.html"><a href="#fondamentaux-r-pr%C3%A9sent%C3%A9s"><i class="fa fa-check"></i><b>1.4</b> Fondamentaux R présentés</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="bien-commencer.html"><a href="bien-commencer.html"><i class="fa fa-check"></i><b>2</b> Bien commencer</a><ul>
-<li class="chapter" data-level="2.1" data-path="bien-commencer.html"><a href="bien-commencer.html#créer-un-projet-sous-rstudio-pour-vous-permettre-de-recencer-vos-travaux."><i class="fa fa-check"></i><b>2.1</b> Créer un projet sous Rstudio pour vous permettre de recencer vos travaux.</a></li>
-<li class="chapter" data-level="2.2" data-path="bien-commencer.html"><a href="bien-commencer.html#intégrer-vos-données"><i class="fa fa-check"></i><b>2.2</b> Intégrer vos données</a></li>
-<li class="chapter" data-level="2.3" data-path="bien-commencer.html"><a href="bien-commencer.html#créer-votre-arborescence-de-projet"><i class="fa fa-check"></i><b>2.3</b> Créer votre arborescence de projet</a></li>
-<li class="chapter" data-level="2.4" data-path="bien-commencer.html"><a href="bien-commencer.html#activer-les-packages-nécessaires"><i class="fa fa-check"></i><b>2.4</b> Activer les packages nécessaires</a></li>
+<li class="chapter" data-level="2" data-path="bien-commencer.html"><a href="bien-commencer.html"><i class="fa fa-check"></i><b>2</b> Bien commencer</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="04-une-variable-qualitative.html"><a href="#cr%C3%A9er-un-projet-sous-rstudio-pour-vous-permettre-de-recencer-vos-travaux."><i class="fa fa-check"></i><b>2.1</b> Créer un projet sous Rstudio pour vous permettre de recencer vos travaux.</a></li>
+<li class="chapter" data-level="2.2" data-path="04-une-variable-qualitative.html"><a href="#int%C3%A9grer-vos-donn%C3%A9es"><i class="fa fa-check"></i><b>2.2</b> Intégrer vos données</a></li>
+<li class="chapter" data-level="2.3" data-path="04-une-variable-qualitative.html"><a href="#cr%C3%A9er-votre-arborescence-de-projet"><i class="fa fa-check"></i><b>2.3</b> Créer votre arborescence de projet</a></li>
+<li class="chapter" data-level="2.4" data-path="04-une-variable-qualitative.html"><a href="#activer-les-packages-n%C3%A9cessaires"><i class="fa fa-check"></i><b>2.4</b> Activer les packages nécessaires</a></li>
 <li class="chapter" data-level="2.5" data-path="bien-commencer.html"><a href="bien-commencer.html#bien-structurer-ses-projets-data"><i class="fa fa-check"></i><b>2.5</b> Bien structurer ses projets data</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html"><i class="fa fa-check"></i><b>3</b> Quelques préliminaires</a><ul>
-<li class="chapter" data-level="3.1" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html#vocabulaire"><i class="fa fa-check"></i><b>3.1</b> Vocabulaire</a></li>
-<li class="chapter" data-level="3.2" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html#données-utilisées-pour-la-formation"><i class="fa fa-check"></i><b>3.2</b> Données utilisées pour la formation</a></li>
+<li class="chapter" data-level="3" data-path="04-une-variable-qualitative.html"><a href="#quelques-pr%C3%A9liminaires"><i class="fa fa-check"></i><b>3</b> Quelques préliminaires</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html"><i class="fa fa-check"></i><b>3.1</b> Vocabulaire</a></li>
+<li class="chapter" data-level="3.2" data-path="04-une-variable-qualitative.html"><a href="#donn%C3%A9es-utilis%C3%A9es-pour-la-formation"><i class="fa fa-check"></i><b>3.2</b> Données utilisées pour la formation</a></li>
 <li class="chapter" data-level="3.3" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html#variables-quantitatives"><i class="fa fa-check"></i><b>3.3</b> Variables quantitatives</a></li>
-<li class="chapter" data-level="3.4" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html#variables-qualitatives"><i class="fa fa-check"></i><b>3.4</b> Variables qualitatives</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html#définition"><i class="fa fa-check"></i><b>3.4.1</b> Définition</a></li>
+<li class="chapter" data-level="3.4" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html#variables-qualitatives"><i class="fa fa-check"></i><b>3.4</b> Variables qualitatives</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="04-une-variable-qualitative.html"><a href="#d%C3%A9finition"><i class="fa fa-check"></i><b>3.4.1</b> Définition</a></li>
 <li class="chapter" data-level="3.4.2" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html#manipulation-des-factor"><i class="fa fa-check"></i><b>3.4.2</b> Manipulation des <code>factor</code></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html"><i class="fa fa-check"></i><b>4</b> Une variable qualitative</a><ul>
-<li class="chapter" data-level="4.1" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#tableaux-de-synthèse"><i class="fa fa-check"></i><b>4.1</b> Tableaux de synthèse</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#comptage"><i class="fa fa-check"></i><b>4.1.1</b> Comptage</a></li>
-<li class="chapter" data-level="4.1.2" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#comptage-pondéré"><i class="fa fa-check"></i><b>4.1.2</b> Comptage pondéré</a></li>
-<li class="chapter" data-level="4.1.3" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#fréquences"><i class="fa fa-check"></i><b>4.1.3</b> Fréquences</a></li>
-<li class="chapter" data-level="4.1.4" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#fréquences-pondérées"><i class="fa fa-check"></i><b>4.1.4</b> Fréquences pondérées</a></li>
+<li class="chapter" data-level="4" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html"><i class="fa fa-check"></i><b>4</b> Une variable quantitative</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#statistiques-de-distribution"><i class="fa fa-check"></i><b>4.1</b> Statistiques de distribution</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="04-une-variable-qualitative.html"><a href="#statistiques-robustes-aux-valeurs-extr%C3%AAmes"><i class="fa fa-check"></i><b>4.1.1</b> Statistiques robustes aux valeurs extrêmes</a></li>
+<li class="chapter" data-level="4.1.2" data-path="04-une-variable-qualitative.html"><a href="#statistiques-sensibles-aux-valeurs-extr%C3%AAmes"><i class="fa fa-check"></i><b>4.1.2</b> Statistiques sensibles aux valeurs extrêmes</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#graphiques"><i class="fa fa-check"></i><b>4.2</b> Graphiques</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#diagramme-en-barres-ou-en-bâtons"><i class="fa fa-check"></i><b>4.2.1</b> Diagramme en barres (ou en bâtons)</a></li>
-<li class="chapter" data-level="4.2.2" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#diagramme-en-secteurs"><i class="fa fa-check"></i><b>4.2.2</b> Diagramme en secteurs</a></li>
+<li class="chapter" data-level="4.2" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#calcul-sur-plusieurs-variables"><i class="fa fa-check"></i><b>4.2</b> Calcul sur plusieurs variables</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#exercice"><i class="fa fa-check"></i><b>4.2.1</b> Exercice</a></li>
 </ul></li>
+<li class="chapter" data-level="4.3" data-path="04-une-variable-qualitative.html"><a href="#repr%C3%A9sentations-graphiques"><i class="fa fa-check"></i><b>4.3</b> Représentations graphiques</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#histogramme"><i class="fa fa-check"></i><b>4.3.1</b> Histogramme</a></li>
+<li class="chapter" data-level="4.3.2" data-path="04-une-variable-qualitative.html"><a href="#la-fonction-de-r%C3%A9partition-cumulative"><i class="fa fa-check"></i><b>4.3.2</b> La fonction de répartition (cumulative)</a></li>
+<li class="chapter" data-level="4.3.3" data-path="04-une-variable-qualitative.html"><a href="#graphique-de-densit%C3%A9"><i class="fa fa-check"></i><b>4.3.3</b> Graphique de densité</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html"><i class="fa fa-check"></i><b>5</b> Deux variables quantitatives</a><ul>
-<li class="chapter" data-level="5.1" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html#représentations-graphiques"><i class="fa fa-check"></i><b>5.1</b> Représentations graphiques</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html#nuage-de-points"><i class="fa fa-check"></i><b>5.1.1</b> Nuage de points</a></li>
-<li class="chapter" data-level="5.1.2" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html#matrice-de-nuages-de-points"><i class="fa fa-check"></i><b>5.1.2</b> Matrice de nuages de points</a></li>
-</ul></li>
-<li class="chapter" data-level="5.2" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html#coefficients-de-corrélation"><i class="fa fa-check"></i><b>5.2</b> Coefficients de corrélation</a></li>
-<li class="chapter" data-level="5.3" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html#régression"><i class="fa fa-check"></i><b>5.3</b> Régression</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html#exercice"><i class="fa fa-check"></i><b>5.3.1</b> Exercice</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html"><i class="fa fa-check"></i><b>6</b> Deux variables qualitatives</a><ul>
-<li class="chapter" data-level="6.1" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#définitions"><i class="fa fa-check"></i><b>6.1</b> Définitions</a></li>
-<li class="chapter" data-level="6.2" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#tableaux-de-synthèse-1"><i class="fa fa-check"></i><b>6.2</b> Tableaux de synthèse</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#tableau-de-contingence-effectifs"><i class="fa fa-check"></i><b>6.2.1</b> Tableau de contingence (effectifs)</a></li>
-<li class="chapter" data-level="6.2.2" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#tableau-des-fréquences"><i class="fa fa-check"></i><b>6.2.2</b> Tableau des fréquences</a></li>
-<li class="chapter" data-level="6.2.3" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#profils-ligne"><i class="fa fa-check"></i><b>6.2.3</b> Profils-ligne</a></li>
-<li class="chapter" data-level="6.2.4" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#profils-colonne"><i class="fa fa-check"></i><b>6.2.4</b> Profils-colonne</a></li>
-</ul></li>
-<li class="chapter" data-level="6.3" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#graphiques-1"><i class="fa fa-check"></i><b>6.3</b> Graphiques</a><ul>
-<li class="chapter" data-level="6.3.1" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#diagramme-en-bâtons"><i class="fa fa-check"></i><b>6.3.1</b> Diagramme en bâtons</a></li>
-<li class="chapter" data-level="6.3.2" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#graphique-mosaïque"><i class="fa fa-check"></i><b>6.3.2</b> Graphique mosaïque</a></li>
-</ul></li>
-<li class="chapter" data-level="6.4" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#avec-pondération"><i class="fa fa-check"></i><b>6.4</b> Avec pondération</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="lien-variable-quantitative-variable-qualitative.html"><a href="lien-variable-quantitative-variable-qualitative.html"><i class="fa fa-check"></i><b>7</b> Lien variable quantitative - variable qualitative</a><ul>
-<li class="chapter" data-level="7.1" data-path="lien-variable-quantitative-variable-qualitative.html"><a href="lien-variable-quantitative-variable-qualitative.html#statistiques-en-fonction-dun-facteur"><i class="fa fa-check"></i><b>7.1</b> Statistiques en fonction d’un facteur</a></li>
-<li class="chapter" data-level="7.2" data-path="lien-variable-quantitative-variable-qualitative.html"><a href="lien-variable-quantitative-variable-qualitative.html#eléments-théoriques"><i class="fa fa-check"></i><b>7.2</b> Eléments théoriques</a></li>
-<li class="chapter" data-level="7.3" data-path="lien-variable-quantitative-variable-qualitative.html"><a href="lien-variable-quantitative-variable-qualitative.html#représentation-graphique"><i class="fa fa-check"></i><b>7.3</b> Représentation graphique</a></li>
-<li class="chapter" data-level="7.4" data-path="lien-variable-quantitative-variable-qualitative.html"><a href="lien-variable-quantitative-variable-qualitative.html#calcul-du-rapport-de-corrélation"><i class="fa fa-check"></i><b>7.4</b> Calcul du rapport de corrélation</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="tests.html"><a href="tests.html"><i class="fa fa-check"></i><b>8</b> Tests</a><ul>
-<li class="chapter" data-level="8.1" data-path="tests.html"><a href="tests.html#sur-une-variable-quantitative"><i class="fa fa-check"></i><b>8.1</b> Sur une variable quantitative</a><ul>
-<li class="chapter" data-level="8.1.1" data-path="tests.html"><a href="tests.html#la-distribution-est-elle-normale"><i class="fa fa-check"></i><b>8.1.1</b> La distribution est-elle normale ?</a></li>
-<li class="chapter" data-level="8.1.2" data-path="tests.html"><a href="tests.html#la-moyenne-diffère-t-elle-de-la-valeur-attendue"><i class="fa fa-check"></i><b>8.1.2</b> La moyenne diffère-t-elle de la valeur attendue ?</a></li>
-</ul></li>
-<li class="chapter" data-level="8.2" data-path="tests.html"><a href="tests.html#sur-une-variable-qualitative"><i class="fa fa-check"></i><b>8.2</b> Sur une variable qualitative</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="tests.html"><a href="tests.html#la-distribution-des-observations-diffère-t-elle-de-celle-attendue"><i class="fa fa-check"></i><b>8.2.1</b> La distribution des observations diffère-t-elle de celle attendue ?</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="tests.html"><a href="tests.html#sur-2-variables-qualitatives"><i class="fa fa-check"></i><b>8.3</b> Sur 2 variables qualitatives</a><ul>
-<li class="chapter" data-level="8.3.1" data-path="tests.html"><a href="tests.html#les-deux-variables-qualitatives-sont-elles-indépendantes-lune-de-lautre"><i class="fa fa-check"></i><b>8.3.1</b> Les deux variables qualitatives sont-elles indépendantes l’une de l’autre ?</a></li>
-<li class="chapter" data-level="8.3.2" data-path="tests.html"><a href="tests.html#un-couple-de-variables-qualitatives-est-il-lié-plus-fortement-quun-autre-couple"><i class="fa fa-check"></i><b>8.3.2</b> Un couple de variables qualitatives est-il “lié plus fortement” qu’un autre couple ?</a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="tests.html"><a href="tests.html#sur-un-croisement-quantitatifqualitatif"><i class="fa fa-check"></i><b>8.4</b> Sur un croisement quantitatif/qualitatif</a><ul>
-<li class="chapter" data-level="8.4.1" data-path="tests.html"><a href="tests.html#échantillons-indépendants"><i class="fa fa-check"></i><b>8.4.1</b> 2 échantillons indépendants</a></li>
-<li class="chapter" data-level="8.4.2" data-path="tests.html"><a href="tests.html#échantillons-dépendants"><i class="fa fa-check"></i><b>8.4.2</b> 2 échantillons dépendants</a></li>
-<li class="chapter" data-level="8.4.3" data-path="tests.html"><a href="tests.html#plusieurs-échantillons-indépendants"><i class="fa fa-check"></i><b>8.4.3</b> Plusieurs échantillons indépendants</a></li>
-</ul></li>
-<li class="chapter" data-level="8.5" data-path="tests.html"><a href="tests.html#résumé"><i class="fa fa-check"></i><b>8.5</b> Résumé</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html"><i class="fa fa-check"></i><b>9</b> Exercice de synthèse</a><ul>
-<li class="chapter" data-level="9.1" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#enoncé"><i class="fa fa-check"></i><b>9.1</b> Enoncé</a><ul>
-<li class="chapter" data-level="9.1.1" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-1"><i class="fa fa-check"></i><b>9.1.1</b> Partie 1</a></li>
-<li class="chapter" data-level="9.1.2" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-2"><i class="fa fa-check"></i><b>9.1.2</b> Partie 2</a></li>
-<li class="chapter" data-level="9.1.3" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-3"><i class="fa fa-check"></i><b>9.1.3</b> Partie 3</a></li>
-<li class="chapter" data-level="9.1.4" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-4"><i class="fa fa-check"></i><b>9.1.4</b> Partie 4</a></li>
-</ul></li>
-<li class="chapter" data-level="9.2" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#corrigé"><i class="fa fa-check"></i><b>9.2</b> Corrigé</a><ul>
-<li class="chapter" data-level="9.2.1" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-1-1"><i class="fa fa-check"></i><b>9.2.1</b> Partie 1</a></li>
-<li class="chapter" data-level="9.2.2" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-2-1"><i class="fa fa-check"></i><b>9.2.2</b> Partie 2</a></li>
-<li class="chapter" data-level="9.2.3" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-3-1"><i class="fa fa-check"></i><b>9.2.3</b> Partie 3</a></li>
-<li class="chapter" data-level="9.2.4" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-4-1"><i class="fa fa-check"></i><b>9.2.4</b> Partie 4</a></li>
+<li class="chapter" data-level="4.4" data-path="04-une-variable-qualitative.html"><a href="#discr%C3%A9tisation-dune-variable-continue"><i class="fa fa-check"></i><b>4.4</b> Discrétisation d’une variable continue</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="04-une-variable-qualitative.html"><a href="#m%C3%A9thode-des-quantiles"><i class="fa fa-check"></i><b>4.4.1</b> Méthode des quantiles</a></li>
+<li class="chapter" data-level="4.4.2" data-path="04-une-variable-qualitative.html"><a href="#m%C3%A9thode-des-seuils-naturels-m%C3%A9thode-de-jenks"><i class="fa fa-check"></i><b>4.4.2</b> Méthode des seuils naturels (méthode de Jenks)</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html"><i class="fa fa-check"></i><b>10</b> Une variable quantitative</a><ul>
-<li class="chapter" data-level="10.1" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#statistiques-de-distribution"><i class="fa fa-check"></i><b>10.1</b> Statistiques de distribution</a><ul>
-<li class="chapter" data-level="10.1.1" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#statistiques-robustes-aux-valeurs-extrêmes"><i class="fa fa-check"></i><b>10.1.1</b> Statistiques robustes aux valeurs extrêmes</a></li>
-<li class="chapter" data-level="10.1.2" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#statistiques-sensibles-aux-valeurs-extrêmes"><i class="fa fa-check"></i><b>10.1.2</b> Statistiques sensibles aux valeurs extrêmes</a></li>
+<li class="chapter" data-level="5" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html"><i class="fa fa-check"></i><b>5</b> Une variable qualitative</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="04-une-variable-qualitative.html"><a href="#tableaux-de-synth%C3%A8se"><i class="fa fa-check"></i><b>5.1</b> Tableaux de synthèse</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#comptage"><i class="fa fa-check"></i><b>5.1.1</b> Comptage</a></li>
+<li class="chapter" data-level="5.1.2" data-path="04-une-variable-qualitative.html"><a href="#comptage-pond%C3%A9r%C3%A9"><i class="fa fa-check"></i><b>5.1.2</b> Comptage pondéré</a></li>
+<li class="chapter" data-level="5.1.3" data-path="04-une-variable-qualitative.html"><a href="#fr%C3%A9quences"><i class="fa fa-check"></i><b>5.1.3</b> Fréquences</a></li>
+<li class="chapter" data-level="5.1.4" data-path="04-une-variable-qualitative.html"><a href="#fr%C3%A9quences-pond%C3%A9r%C3%A9es"><i class="fa fa-check"></i><b>5.1.4</b> Fréquences pondérées</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#calcul-sur-plusieurs-variables"><i class="fa fa-check"></i><b>10.2</b> Calcul sur plusieurs variables</a><ul>
-<li class="chapter" data-level="10.2.1" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#exercice-1"><i class="fa fa-check"></i><b>10.2.1</b> Exercice</a></li>
+<li class="chapter" data-level="5.2" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#graphiques"><i class="fa fa-check"></i><b>5.2</b> Graphiques</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="04-une-variable-qualitative.html"><a href="#diagramme-en-barres-ou-en-b%C3%A2tons"><i class="fa fa-check"></i><b>5.2.1</b> Diagramme en barres (ou en bâtons)</a></li>
+<li class="chapter" data-level="5.2.2" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#diagramme-en-secteurs"><i class="fa fa-check"></i><b>5.2.2</b> Diagramme en secteurs</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#représentations-graphiques-1"><i class="fa fa-check"></i><b>10.3</b> Représentations graphiques</a><ul>
-<li class="chapter" data-level="10.3.1" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#histogramme"><i class="fa fa-check"></i><b>10.3.1</b> Histogramme</a></li>
-<li class="chapter" data-level="10.3.2" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#la-fonction-de-répartition-cumulative"><i class="fa fa-check"></i><b>10.3.2</b> La fonction de répartition (cumulative)</a></li>
-<li class="chapter" data-level="10.3.3" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#graphique-de-densité"><i class="fa fa-check"></i><b>10.3.3</b> Graphique de densité</a></li>
 </ul></li>
-<li class="chapter" data-level="10.4" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#discrétisation-dune-variable-continue"><i class="fa fa-check"></i><b>10.4</b> Discrétisation d’une variable continue</a><ul>
-<li class="chapter" data-level="10.4.1" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#méthode-des-quantiles"><i class="fa fa-check"></i><b>10.4.1</b> Méthode des quantiles</a></li>
-<li class="chapter" data-level="10.4.2" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#méthode-des-seuils-naturels-méthode-de-jenks"><i class="fa fa-check"></i><b>10.4.2</b> Méthode des seuils naturels (méthode de Jenks)</a></li>
+<li class="chapter" data-level="6" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html"><i class="fa fa-check"></i><b>6</b> Deux variables quantitatives</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="04-une-variable-qualitative.html"><a href="#repr%C3%A9sentations-graphiques-1"><i class="fa fa-check"></i><b>6.1</b> Représentations graphiques</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html#nuage-de-points"><i class="fa fa-check"></i><b>6.1.1</b> Nuage de points</a></li>
+<li class="chapter" data-level="6.1.2" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html#matrice-de-nuages-de-points"><i class="fa fa-check"></i><b>6.1.2</b> Matrice de nuages de points</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="04-une-variable-qualitative.html"><a href="#coefficients-de-corr%C3%A9lation"><i class="fa fa-check"></i><b>6.2</b> Coefficients de corrélation</a></li>
+<li class="chapter" data-level="6.3" data-path="04-une-variable-qualitative.html"><a href="#r%C3%A9gression"><i class="fa fa-check"></i><b>6.3</b> Régression</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html#exercice-1"><i class="fa fa-check"></i><b>6.3.1</b> Exercice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html"><i class="fa fa-check"></i><b>7</b> Deux variables qualitatives</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="04-une-variable-qualitative.html"><a href="#d%C3%A9finitions"><i class="fa fa-check"></i><b>7.1</b> Définitions</a></li>
+<li class="chapter" data-level="7.2" data-path="04-une-variable-qualitative.html"><a href="#tableaux-de-synth%C3%A8se-1"><i class="fa fa-check"></i><b>7.2</b> Tableaux de synthèse</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#tableau-de-contingence-effectifs"><i class="fa fa-check"></i><b>7.2.1</b> Tableau de contingence (effectifs)</a></li>
+<li class="chapter" data-level="7.2.2" data-path="04-une-variable-qualitative.html"><a href="#tableau-des-fr%C3%A9quences"><i class="fa fa-check"></i><b>7.2.2</b> Tableau des fréquences</a></li>
+<li class="chapter" data-level="7.2.3" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#profils-ligne"><i class="fa fa-check"></i><b>7.2.3</b> Profils-ligne</a></li>
+<li class="chapter" data-level="7.2.4" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#profils-colonne"><i class="fa fa-check"></i><b>7.2.4</b> Profils-colonne</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#graphiques-1"><i class="fa fa-check"></i><b>7.3</b> Graphiques</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="04-une-variable-qualitative.html"><a href="#diagramme-en-b%C3%A2tons"><i class="fa fa-check"></i><b>7.3.1</b> Diagramme en bâtons</a></li>
+<li class="chapter" data-level="7.3.2" data-path="04-une-variable-qualitative.html"><a href="#graphique-mosa%C3%AFque"><i class="fa fa-check"></i><b>7.3.2</b> Graphique mosaïque</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="04-une-variable-qualitative.html"><a href="#avec-pond%C3%A9ration"><i class="fa fa-check"></i><b>7.4</b> Avec pondération</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lien-variable-quantitative---variable-qualitative.html"><a href="lien-variable-quantitative---variable-qualitative.html"><i class="fa fa-check"></i><b>8</b> Lien variable quantitative - variable qualitative</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="lien-variable-quantitative---variable-qualitative.html"><a href="lien-variable-quantitative---variable-qualitative.html#statistiques-en-fonction-dun-facteur"><i class="fa fa-check"></i><b>8.1</b> Statistiques en fonction d’un facteur</a></li>
+<li class="chapter" data-level="8.2" data-path="04-une-variable-qualitative.html"><a href="#el%C3%A9ments-th%C3%A9oriques"><i class="fa fa-check"></i><b>8.2</b> Eléments théoriques</a></li>
+<li class="chapter" data-level="8.3" data-path="04-une-variable-qualitative.html"><a href="#repr%C3%A9sentation-graphique"><i class="fa fa-check"></i><b>8.3</b> Représentation graphique</a></li>
+<li class="chapter" data-level="8.4" data-path="04-une-variable-qualitative.html"><a href="#calcul-du-rapport-de-corr%C3%A9lation"><i class="fa fa-check"></i><b>8.4</b> Calcul du rapport de corrélation</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="tests.html"><a href="tests.html"><i class="fa fa-check"></i><b>9</b> Tests</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="tests.html"><a href="tests.html#sur-une-variable-quantitative"><i class="fa fa-check"></i><b>9.1</b> Sur une variable quantitative</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="tests.html"><a href="tests.html#la-distribution-est-elle-normale"><i class="fa fa-check"></i><b>9.1.1</b> La distribution est-elle normale ?</a></li>
+<li class="chapter" data-level="9.1.2" data-path="04-une-variable-qualitative.html"><a href="#la-moyenne-diff%C3%A8re-t-elle-de-la-valeur-attendue"><i class="fa fa-check"></i><b>9.1.2</b> La moyenne diffère-t-elle de la valeur attendue ?</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="tests.html"><a href="tests.html#sur-une-variable-qualitative"><i class="fa fa-check"></i><b>9.2</b> Sur une variable qualitative</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="04-une-variable-qualitative.html"><a href="#la-distribution-des-observations-diff%C3%A8re-t-elle-de-celle-attendue"><i class="fa fa-check"></i><b>9.2.1</b> La distribution des observations diffère-t-elle de celle attendue ?</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="tests.html"><a href="tests.html#sur-2-variables-qualitatives"><i class="fa fa-check"></i><b>9.3</b> Sur 2 variables qualitatives</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="04-une-variable-qualitative.html"><a href="#les-deux-variables-qualitatives-sont-elles-ind%C3%A9pendantes-lune-de-lautre"><i class="fa fa-check"></i><b>9.3.1</b> Les deux variables qualitatives sont-elles indépendantes l’une de l’autre ?</a></li>
+<li class="chapter" data-level="9.3.2" data-path="04-une-variable-qualitative.html"><a href="#un-couple-de-variables-qualitatives-est-il-li%C3%A9-plus-fortement-quun-autre-couple"><i class="fa fa-check"></i><b>9.3.2</b> Un couple de variables qualitatives est-il “lié plus fortement” qu’un autre couple ?</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="tests.html"><a href="tests.html#sur-un-croisement-quantitatifqualitatif"><i class="fa fa-check"></i><b>9.4</b> Sur un croisement quantitatif/qualitatif</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="04-une-variable-qualitative.html"><a href="#%C3%A9chantillons-ind%C3%A9pendants"><i class="fa fa-check"></i><b>9.4.1</b> 2 échantillons indépendants</a></li>
+<li class="chapter" data-level="9.4.2" data-path="04-une-variable-qualitative.html"><a href="#%C3%A9chantillons-d%C3%A9pendants"><i class="fa fa-check"></i><b>9.4.2</b> 2 échantillons dépendants</a></li>
+<li class="chapter" data-level="9.4.3" data-path="04-une-variable-qualitative.html"><a href="#plusieurs-%C3%A9chantillons-ind%C3%A9pendants"><i class="fa fa-check"></i><b>9.4.3</b> Plusieurs échantillons indépendants</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="04-une-variable-qualitative.html"><a href="#r%C3%A9sum%C3%A9"><i class="fa fa-check"></i><b>9.5</b> Résumé</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="04-une-variable-qualitative.html"><a href="#exercice-de-synth%C3%A8se"><i class="fa fa-check"></i><b>10</b> Exercice de synthèse</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="04-une-variable-qualitative.html"><a href="#enonc%C3%A9"><i class="fa fa-check"></i><b>10.1</b> Enoncé</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html"><i class="fa fa-check"></i><b>10.1.1</b> Partie 1</a></li>
+<li class="chapter" data-level="10.1.2" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-2"><i class="fa fa-check"></i><b>10.1.2</b> Partie 2</a></li>
+<li class="chapter" data-level="10.1.3" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-3"><i class="fa fa-check"></i><b>10.1.3</b> Partie 3</a></li>
+<li class="chapter" data-level="10.1.4" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-4"><i class="fa fa-check"></i><b>10.1.4</b> Partie 4</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="04-une-variable-qualitative.html"><a href="#corrig%C3%A9"><i class="fa fa-check"></i><b>10.2</b> Corrigé</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-1-1"><i class="fa fa-check"></i><b>10.2.1</b> Partie 1</a></li>
+<li class="chapter" data-level="10.2.2" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-2-1"><i class="fa fa-check"></i><b>10.2.2</b> Partie 2</a></li>
+<li class="chapter" data-level="10.2.3" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-3-1"><i class="fa fa-check"></i><b>10.2.3</b> Partie 3</a></li>
+<li class="chapter" data-level="10.2.4" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-4-1"><i class="fa fa-check"></i><b>10.2.4</b> Partie 4</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -289,8 +327,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="une-variable-qualitative" class="section level1">
-<h1><span class="header-section-number">Chapitre 4</span> Une variable qualitative</h1>
+<div id="une-variable-qualitative" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapitre 5</span> Une variable qualitative<a href="une-variable-qualitative.html#une-variable-qualitative" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Les données qualitatives peuvent faire l’objet de dénombrement, en effectif ou en proportion.</p>
 <p>Petit rappel : <a href="http://grasland.script.univ-paris-diderot.fr/STAT98/stat98_8/stat98_8.htm">cours en ligne</a> et <a href="http://www.jybaudot.fr/Stats/contingence.html">liens avec Excel</a>.</p>
 <p>Pour décrire une variable qualitative, on calcule :</p>
@@ -301,124 +339,128 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>On peut calculer des effectifs pondérés (exemple : la population des communes de chaque type ZAU). Dans ce cas <span class="math inline">\(N_i = \sum_c w_i\cdot \mathbb{I}_{c = i}\)</span>
 et <span class="math inline">\(N = \sum_c w_i\)</span>, où c est l’ensemble des communes.</p>
 <p>Pour un premier coup d’oeil à une variable qualitative, on peut utiliser la fonction générique <code>summary()</code>.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1"><span class="kw">select</span> (dat, ZAU) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb42-2" data-line-number="2"><span class="st">  </span><span class="kw">summary</span> () </a></code></pre></div>
-<pre><code>##    ZAU                                                      
-##  112 - Couronne d&#39;un grand p\xf4le                  :12297  
-##  400 - Commune isol\xe9e hors influence des p\xf4les: 7383  
-##  300 - Autre commune multipolaris\xe9e              : 7021  
-##  120 - Multipolaris\xe9e des grandes aires urbaines : 3962  
-##  111 - Grand p\xf4le (plus de 10 000 emplois)       : 3285  
-##  221 - Petit p\xf4le (de 1 500 \xe0 5 000 emplois)  :  888  
-##  (Other)                                            : 1853</code></pre>
-<div id="tableaux-de-synthèse" class="section level2">
-<h2><span class="header-section-number">4.1</span> Tableaux de synthèse</h2>
-<div id="comptage" class="section level3">
-<h3><span class="header-section-number">4.1.1</span> Comptage</h3>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="une-variable-qualitative.html#cb93-1" tabindex="-1"></a><span class="fu">select</span> (dat, ZAU) <span class="sc">%&gt;%</span></span>
+<span id="cb93-2"><a href="une-variable-qualitative.html#cb93-2" tabindex="-1"></a>  <span class="fu">summary</span> () </span></code></pre></div>
+<pre><code>##      ZAU           
+##  Length:36689      
+##  Class :character  
+##  Mode  :character</code></pre>
+<div id="tableaux-de-synthèse" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Tableaux de synthèse<a href="#tableaux-de-synth%C3%A8se" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="comptage" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Comptage<a href="une-variable-qualitative.html#comptage" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>On cherche le nombre d’occurence de chacune des modalités. Cela s’effectue grâce à la fonction <code>table()</code>.</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" data-line-number="1"><span class="kw">pull</span> (dat, ZAU) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb44-2" data-line-number="2"><span class="st">  </span><span class="kw">table</span> () </a></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="une-variable-qualitative.html#cb95-1" tabindex="-1"></a><span class="fu">pull</span> (dat, ZAU) <span class="sc">%&gt;%</span></span>
+<span id="cb95-2"><a href="une-variable-qualitative.html#cb95-2" tabindex="-1"></a>  <span class="fu">table</span> () </span></code></pre></div>
 <pre><code>## .
-##        111 - Grand p\xf4le (plus de 10 000 emplois) 
-##                                                3285 
-##                   112 - Couronne d&#39;un grand p\xf4le 
-##                                               12297 
-##  120 - Multipolaris\xe9e des grandes aires urbaines 
-##                                                3962 
-##     211 - Moyen p\xf4le (5 000 \xe0 10 000 emplois) 
-##                                                 456 
-##                   212 - Couronne d&#39;un moyen p\xf4le 
-##                                                 815 
-##   221 - Petit p\xf4le (de 1 500 \xe0 5 000 emplois) 
-##                                                 888 
-##                   222 - Couronne d&#39;un petit p\xf4le 
-##                                                 582 
-##               300 - Autre commune multipolaris\xe9e 
-##                                                7021 
-## 400 - Commune isol\xe9e hors influence des p\xf4les 
-##                                                7383</code></pre>
+##       111 - Grand pôle (plus de 10 000 emplois) 
+##                                            3285 
+##                  112 - Couronne d&#39;un grand pôle 
+##                                           12297 
+## 120 - Multipolarisée des grandes aires urbaines 
+##                                            3962 
+##       211 - Moyen pôle (5 000 à 10 000 emplois) 
+##                                             456 
+##                  212 - Couronne d&#39;un moyen pôle 
+##                                             815 
+##     221 - Petit pôle (de 1 500 à 5 000 emplois) 
+##                                             888 
+##                  222 - Couronne d&#39;un petit pôle 
+##                                             582 
+##              300 - Autre commune multipolarisée 
+##                                            7021 
+##   400 - Commune isolée hors influence des pôles 
+##                                            7383</code></pre>
 <p>La fonction <code>DT::datatable()</code> permet une mise en forme moins austère des dataframes.</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" data-line-number="1"><span class="kw">pull</span> (dat, ZAU) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb46-2" data-line-number="2"><span class="st">  </span><span class="kw">table</span> () <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb46-3" data-line-number="3"><span class="st">  </span><span class="kw">as.data.frame</span> () <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb46-4" data-line-number="4"><span class="st">  </span><span class="kw">datatable</span> (<span class="dt">rownames =</span> <span class="ot">FALSE</span>, <span class="dt">colnames =</span> <span class="kw">c</span> (<span class="st">&quot;ZAU&quot;</span>, <span class="st">&quot;Nombre&quot;</span>))</a></code></pre></div>
-<div id="htmlwidget-0657d8dc5efa6e718f23" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0657d8dc5efa6e718f23">{"x":{"filter":"none","data":[["111 - Grand p&lt;f4&gt;le (plus de 10 000 emplois)","112 - Couronne d'un grand p&lt;f4&gt;le","120 - Multipolaris&lt;e9&gt;e des grandes aires urbaines","211 - Moyen p&lt;f4&gt;le (5 000 &lt;e0&gt; 10 000 emplois)","212 - Couronne d'un moyen p&lt;f4&gt;le","221 - Petit p&lt;f4&gt;le (de 1 500 &lt;e0&gt; 5 000 emplois)","222 - Couronne d'un petit p&lt;f4&gt;le","300 - Autre commune multipolaris&lt;e9&gt;e","400 - Commune isol&lt;e9&gt;e hors influence des p&lt;f4&gt;les"],[3285,12297,3962,456,815,888,582,7021,7383]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>ZAU<\/th>\n      <th>Nombre<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="une-variable-qualitative.html#cb97-1" tabindex="-1"></a><span class="fu">pull</span> (dat, ZAU) <span class="sc">%&gt;%</span></span>
+<span id="cb97-2"><a href="une-variable-qualitative.html#cb97-2" tabindex="-1"></a>  <span class="fu">table</span> () <span class="sc">%&gt;%</span></span>
+<span id="cb97-3"><a href="une-variable-qualitative.html#cb97-3" tabindex="-1"></a>  <span class="fu">as.data.frame</span> () <span class="sc">%&gt;%</span></span>
+<span id="cb97-4"><a href="une-variable-qualitative.html#cb97-4" tabindex="-1"></a>  <span class="fu">datatable</span> (<span class="at">rownames =</span> <span class="cn">FALSE</span>, <span class="at">colnames =</span> <span class="fu">c</span> (<span class="st">&quot;ZAU&quot;</span>, <span class="st">&quot;Nombre&quot;</span>))</span></code></pre></div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-0d9b8588a0732d3f12e4" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0d9b8588a0732d3f12e4">{"x":{"filter":"none","vertical":false,"data":[["111 - Grand pôle (plus de 10 000 emplois)","112 - Couronne d'un grand pôle","120 - Multipolarisée des grandes aires urbaines","211 - Moyen pôle (5 000 à 10 000 emplois)","212 - Couronne d'un moyen pôle","221 - Petit pôle (de 1 500 à 5 000 emplois)","222 - Couronne d'un petit pôle","300 - Autre commune multipolarisée","400 - Commune isolée hors influence des pôles"],[3285,12297,3962,456,815,888,582,7021,7383]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>ZAU<\/th>\n      <th>Nombre<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":1},{"name":".","targets":0},{"name":"Freq","targets":1}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
-<div id="comptage-pondéré" class="section level3">
-<h3><span class="header-section-number">4.1.2</span> Comptage pondéré</h3>
+<div id="comptage-pondéré" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Comptage pondéré<a href="#comptage-pond%C3%A9r%C3%A9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>On ne cherche plus à afficher le nombre d’occurence de chaque modalités, mais à connaître le <em>poids</em> d’une variable sur ces modalités. Il s’obtient avec la fonction <code>xtabs()</code>. Par exemple, si on veut connaître la population pour chaque ZAU :</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb47-1" data-line-number="1"><span class="kw">xtabs</span> (<span class="dt">formula =</span> P14_POP <span class="op">~</span><span class="st"> </span>ZAU, <span class="dt">data =</span> dat) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb47-2" data-line-number="2"><span class="st">  </span><span class="kw">as.data.frame</span> () <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb47-3" data-line-number="3"><span class="st">  </span><span class="kw">datatable</span> (<span class="dt">rownames =</span> <span class="ot">FALSE</span>, <span class="dt">colnames =</span> <span class="kw">c</span> (<span class="st">&quot;ZAU&quot;</span>, <span class="st">&quot;Population&quot;</span>))</a></code></pre></div>
-<div id="htmlwidget-cc4ee37096e1d5ac5038" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-cc4ee37096e1d5ac5038">{"x":{"filter":"none","data":[["111 - Grand p&lt;f4&gt;le (plus de 10 000 emplois)","112 - Couronne d'un grand p&lt;f4&gt;le","120 - Multipolaris&lt;e9&gt;e des grandes aires urbaines","211 - Moyen p&lt;f4&gt;le (5 000 &lt;e0&gt; 10 000 emplois)","212 - Couronne d'un moyen p&lt;f4&gt;le","221 - Petit p&lt;f4&gt;le (de 1 500 &lt;e0&gt; 5 000 emplois)","222 - Couronne d'un petit p&lt;f4&gt;le","300 - Autre commune multipolaris&lt;e9&gt;e","400 - Commune isol&lt;e9&gt;e hors influence des p&lt;f4&gt;les"],[38738103,12437519,3414201,1931948,359717,2422164,167718,3415222,3020568]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>ZAU<\/th>\n      <th>Population<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="une-variable-qualitative.html#cb98-1" tabindex="-1"></a><span class="fu">xtabs</span> (<span class="at">formula =</span> P14_POP <span class="sc">~</span> ZAU, <span class="at">data =</span> dat) <span class="sc">%&gt;%</span> </span>
+<span id="cb98-2"><a href="une-variable-qualitative.html#cb98-2" tabindex="-1"></a>  <span class="fu">as.data.frame</span> () <span class="sc">%&gt;%</span> </span>
+<span id="cb98-3"><a href="une-variable-qualitative.html#cb98-3" tabindex="-1"></a>  <span class="fu">datatable</span> (<span class="at">rownames =</span> <span class="cn">FALSE</span>, <span class="at">colnames =</span> <span class="fu">c</span> (<span class="st">&quot;ZAU&quot;</span>, <span class="st">&quot;Population&quot;</span>))</span></code></pre></div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-6180dbb3dd43fa59794a" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-6180dbb3dd43fa59794a">{"x":{"filter":"none","vertical":false,"data":[["111 - Grand pôle (plus de 10 000 emplois)","112 - Couronne d'un grand pôle","120 - Multipolarisée des grandes aires urbaines","211 - Moyen pôle (5 000 à 10 000 emplois)","212 - Couronne d'un moyen pôle","221 - Petit pôle (de 1 500 à 5 000 emplois)","222 - Couronne d'un petit pôle","300 - Autre commune multipolarisée","400 - Commune isolée hors influence des pôles"],[null,null,null,null,null,null,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>ZAU<\/th>\n      <th>Population<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":1},{"name":"ZAU","targets":0},{"name":"Freq","targets":1}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
-<div id="fréquences" class="section level3">
-<h3><span class="header-section-number">4.1.3</span> Fréquences</h3>
+<div id="fréquences" class="section level3 hasAnchor" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> Fréquences<a href="#fr%C3%A9quences" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>On souhaite maintenant connaître le pourcentage de communes que représente chaque ZAU. Cela se fait grâce à la fonction <code>table()</code> suivi cette fois de <code>prop.table()</code>. Par exemple :</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" data-line-number="1"><span class="kw">pull</span> (dat, ZAU) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb48-2" data-line-number="2"><span class="st">  </span><span class="kw">table</span> () <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb48-3" data-line-number="3"><span class="st">  </span><span class="kw">prop.table</span> () <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb48-4" data-line-number="4"><span class="st">  </span><span class="kw">round</span> (<span class="dv">3</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb48-5" data-line-number="5"><span class="st">  </span><span class="kw">as.data.frame</span> () <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb48-6" data-line-number="6"><span class="st">  </span><span class="kw">datatable</span> (<span class="dt">rownames =</span> <span class="ot">FALSE</span>, <span class="dt">colnames =</span> <span class="kw">c</span> (<span class="st">&quot;ZAU&quot;</span>, <span class="st">&quot;Fréquence&quot;</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb48-7" data-line-number="7"><span class="st">  </span><span class="kw">formatPercentage</span> (<span class="st">&#39;Freq&#39;</span>, <span class="dv">1</span>)</a></code></pre></div>
-<div id="htmlwidget-0d5f204cd2b23a452e36" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0d5f204cd2b23a452e36">{"x":{"filter":"none","data":[["111 - Grand p&lt;f4&gt;le (plus de 10 000 emplois)","112 - Couronne d'un grand p&lt;f4&gt;le","120 - Multipolaris&lt;e9&gt;e des grandes aires urbaines","211 - Moyen p&lt;f4&gt;le (5 000 &lt;e0&gt; 10 000 emplois)","212 - Couronne d'un moyen p&lt;f4&gt;le","221 - Petit p&lt;f4&gt;le (de 1 500 &lt;e0&gt; 5 000 emplois)","222 - Couronne d'un petit p&lt;f4&gt;le","300 - Autre commune multipolaris&lt;e9&gt;e","400 - Commune isol&lt;e9&gt;e hors influence des p&lt;f4&gt;les"],[0.09,0.335,0.108,0.012,0.022,0.024,0.016,0.191,0.201]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>ZAU<\/th>\n      <th>Fréquence<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nDTWidget.formatPercentage(this, row, data, 1, 1, 3, \",\", \".\");\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="une-variable-qualitative.html#cb99-1" tabindex="-1"></a><span class="fu">pull</span> (dat, ZAU) <span class="sc">%&gt;%</span></span>
+<span id="cb99-2"><a href="une-variable-qualitative.html#cb99-2" tabindex="-1"></a>  <span class="fu">table</span> () <span class="sc">%&gt;%</span></span>
+<span id="cb99-3"><a href="une-variable-qualitative.html#cb99-3" tabindex="-1"></a>  <span class="fu">prop.table</span> () <span class="sc">%&gt;%</span> </span>
+<span id="cb99-4"><a href="une-variable-qualitative.html#cb99-4" tabindex="-1"></a>  <span class="fu">round</span> (<span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb99-5"><a href="une-variable-qualitative.html#cb99-5" tabindex="-1"></a>  <span class="fu">as.data.frame</span> () <span class="sc">%&gt;%</span></span>
+<span id="cb99-6"><a href="une-variable-qualitative.html#cb99-6" tabindex="-1"></a>  <span class="fu">datatable</span> (<span class="at">rownames =</span> <span class="cn">FALSE</span>, <span class="at">colnames =</span> <span class="fu">c</span> (<span class="st">&quot;ZAU&quot;</span>, <span class="st">&quot;Fréquence&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb99-7"><a href="une-variable-qualitative.html#cb99-7" tabindex="-1"></a>  <span class="fu">formatPercentage</span> (<span class="st">&#39;Freq&#39;</span>, <span class="dv">1</span>)</span></code></pre></div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-84f5e31222a0e6c43c96" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-84f5e31222a0e6c43c96">{"x":{"filter":"none","vertical":false,"data":[["111 - Grand pôle (plus de 10 000 emplois)","112 - Couronne d'un grand pôle","120 - Multipolarisée des grandes aires urbaines","211 - Moyen pôle (5 000 à 10 000 emplois)","212 - Couronne d'un moyen pôle","221 - Petit pôle (de 1 500 à 5 000 emplois)","222 - Couronne d'un petit pôle","300 - Autre commune multipolarisée","400 - Commune isolée hors influence des pôles"],[0.09,0.335,0.108,0.012,0.022,0.024,0.016,0.191,0.201]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>ZAU<\/th>\n      <th>Fréquence<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 1, 3, \",\", \".\", null);\n  }"},{"className":"dt-right","targets":1},{"name":".","targets":0},{"name":"Freq","targets":1}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render"],"jsHooks":[]}</script>
 </div>
-<div id="fréquences-pondérées" class="section level3">
-<h3><span class="header-section-number">4.1.4</span> Fréquences pondérées</h3>
+<div id="fréquences-pondérées" class="section level3 hasAnchor" number="5.1.4">
+<h3><span class="header-section-number">5.1.4</span> Fréquences pondérées<a href="#fr%C3%A9quences-pond%C3%A9r%C3%A9es" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>On souhaite finalement connaître le pourcentage de population que représente chaque ZAU. En respecant la même logique que précédemment : cela se fait grâce à la fonction <code>xtabs()</code> suivi de <code>prop.table()</code>. Par exemple :</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" data-line-number="1"><span class="kw">xtabs</span> (<span class="dt">formula =</span> P14_POP <span class="op">~</span><span class="st"> </span>ZAU, <span class="dt">data =</span> dat) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb49-2" data-line-number="2"><span class="st">  </span><span class="kw">prop.table</span> () <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb49-3" data-line-number="3"><span class="st">  </span><span class="kw">round</span> (<span class="dv">3</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb49-4" data-line-number="4"><span class="st">  </span><span class="kw">as.data.frame</span> () <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb49-5" data-line-number="5"><span class="st">  </span><span class="kw">datatable</span> (<span class="dt">rownames =</span> <span class="ot">FALSE</span>, <span class="dt">colnames =</span> <span class="kw">c</span>(<span class="st">&quot;ZAU&quot;</span>, <span class="st">&quot;% de la Population&quot;</span>))<span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb49-6" data-line-number="6"><span class="st">  </span><span class="kw">formatPercentage</span>(<span class="st">&#39;Freq&#39;</span>, <span class="dv">1</span>)</a></code></pre></div>
-<div id="htmlwidget-0ebb277ac965285eefd4" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0ebb277ac965285eefd4">{"x":{"filter":"none","data":[["111 - Grand p&lt;f4&gt;le (plus de 10 000 emplois)","112 - Couronne d'un grand p&lt;f4&gt;le","120 - Multipolaris&lt;e9&gt;e des grandes aires urbaines","211 - Moyen p&lt;f4&gt;le (5 000 &lt;e0&gt; 10 000 emplois)","212 - Couronne d'un moyen p&lt;f4&gt;le","221 - Petit p&lt;f4&gt;le (de 1 500 &lt;e0&gt; 5 000 emplois)","222 - Couronne d'un petit p&lt;f4&gt;le","300 - Autre commune multipolaris&lt;e9&gt;e","400 - Commune isol&lt;e9&gt;e hors influence des p&lt;f4&gt;les"],[0.588,0.189,0.052,0.029,0.005,0.037,0.003,0.052,0.046]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>ZAU<\/th>\n      <th>% de la Population<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nDTWidget.formatPercentage(this, row, data, 1, 1, 3, \",\", \".\");\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="une-variable-qualitative.html#cb100-1" tabindex="-1"></a><span class="fu">xtabs</span> (<span class="at">formula =</span> P14_POP <span class="sc">~</span> ZAU, <span class="at">data =</span> dat) <span class="sc">%&gt;%</span> </span>
+<span id="cb100-2"><a href="une-variable-qualitative.html#cb100-2" tabindex="-1"></a>  <span class="fu">prop.table</span> () <span class="sc">%&gt;%</span> </span>
+<span id="cb100-3"><a href="une-variable-qualitative.html#cb100-3" tabindex="-1"></a>  <span class="fu">round</span> (<span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb100-4"><a href="une-variable-qualitative.html#cb100-4" tabindex="-1"></a>  <span class="fu">as.data.frame</span> () <span class="sc">%&gt;%</span> </span>
+<span id="cb100-5"><a href="une-variable-qualitative.html#cb100-5" tabindex="-1"></a>  <span class="fu">datatable</span> (<span class="at">rownames =</span> <span class="cn">FALSE</span>, <span class="at">colnames =</span> <span class="fu">c</span>(<span class="st">&quot;ZAU&quot;</span>, <span class="st">&quot;% de la Population&quot;</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb100-6"><a href="une-variable-qualitative.html#cb100-6" tabindex="-1"></a>  <span class="fu">formatPercentage</span>(<span class="st">&#39;Freq&#39;</span>, <span class="dv">1</span>)</span></code></pre></div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-a8d8bef73054443ff74b" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-a8d8bef73054443ff74b">{"x":{"filter":"none","vertical":false,"data":[["111 - Grand pôle (plus de 10 000 emplois)","112 - Couronne d'un grand pôle","120 - Multipolarisée des grandes aires urbaines","211 - Moyen pôle (5 000 à 10 000 emplois)","212 - Couronne d'un moyen pôle","221 - Petit pôle (de 1 500 à 5 000 emplois)","222 - Couronne d'un petit pôle","300 - Autre commune multipolarisée","400 - Commune isolée hors influence des pôles"],[null,null,null,null,null,null,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>ZAU<\/th>\n      <th>% de la Population<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 1, 3, \",\", \".\", null);\n  }"},{"className":"dt-right","targets":1},{"name":"ZAU","targets":0},{"name":"Freq","targets":1}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render"],"jsHooks":[]}</script>
 </div>
 </div>
-<div id="graphiques" class="section level2">
-<h2><span class="header-section-number">4.2</span> Graphiques</h2>
-<div id="diagramme-en-barres-ou-en-bâtons" class="section level3">
-<h3><span class="header-section-number">4.2.1</span> Diagramme en barres (ou en bâtons)</h3>
+<div id="graphiques" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Graphiques<a href="une-variable-qualitative.html#graphiques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="diagramme-en-barres-ou-en-bâtons" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Diagramme en barres (ou en bâtons)<a href="#diagramme-en-barres-ou-en-b%C3%A2tons" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>On souhaite connaître le nombre de communes dans chaque ZAU. Grâce à notre base communale, on cherche donc le nombre de lignes pour chaque ZAU.</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" data-line-number="1"><span class="kw">ggplot</span> (dat, <span class="kw">aes</span> (<span class="dt">x =</span> ZAU2, <span class="dt">fill =</span> ZAU2)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb50-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_bar</span> () <span class="op">+</span></a>
-<a class="sourceLine" id="cb50-3" data-line-number="3"><span class="st">  </span><span class="kw">ggtitle</span> (<span class="st">&quot;Zonage en Aires Urbaines&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb50-4" data-line-number="4"><span class="st">  </span><span class="kw">xlab</span> (<span class="dt">label =</span> <span class="st">&quot;Classe typolgique ZAU&quot;</span>) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb50-5" data-line-number="5"><span class="st">  </span><span class="kw">ylab</span> (<span class="dt">label =</span> <span class="st">&quot;Nombre de communes&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb50-6" data-line-number="6"><span class="st">  </span><span class="kw">theme</span> (<span class="dt">axis.text.x =</span> <span class="kw">element_blank</span> ()) <span class="op">+</span></a>
-<a class="sourceLine" id="cb50-7" data-line-number="7"><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.title =</span> <span class="kw">element_blank</span>())</a></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="une-variable-qualitative.html#cb101-1" tabindex="-1"></a><span class="fu">ggplot</span> (dat, <span class="fu">aes</span> (<span class="at">x =</span> ZAU2, <span class="at">fill =</span> ZAU2)) <span class="sc">+</span></span>
+<span id="cb101-2"><a href="une-variable-qualitative.html#cb101-2" tabindex="-1"></a>  <span class="fu">geom_bar</span> () <span class="sc">+</span></span>
+<span id="cb101-3"><a href="une-variable-qualitative.html#cb101-3" tabindex="-1"></a>  <span class="fu">ggtitle</span> (<span class="st">&quot;Zonage en Aires Urbaines&quot;</span>) <span class="sc">+</span></span>
+<span id="cb101-4"><a href="une-variable-qualitative.html#cb101-4" tabindex="-1"></a>  <span class="fu">xlab</span> (<span class="at">label =</span> <span class="st">&quot;Classe typolgique ZAU&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb101-5"><a href="une-variable-qualitative.html#cb101-5" tabindex="-1"></a>  <span class="fu">ylab</span> (<span class="at">label =</span> <span class="st">&quot;Nombre de communes&quot;</span>) <span class="sc">+</span></span>
+<span id="cb101-6"><a href="une-variable-qualitative.html#cb101-6" tabindex="-1"></a>  <span class="fu">theme</span> (<span class="at">axis.text.x =</span> <span class="fu">element_blank</span> ()) <span class="sc">+</span></span>
+<span id="cb101-7"><a href="une-variable-qualitative.html#cb101-7" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span></code></pre></div>
+<pre><code>## Warning in min(x): no non-missing arguments to min; returning Inf</code></pre>
+<pre><code>## Warning in max(x): no non-missing arguments to max; returning -Inf</code></pre>
+<pre><code>## Warning: Removed 36689 rows containing non-finite outside the scale range
+## (`stat_count()`).</code></pre>
 <p><img src="Statistiques-descriptives_files/figure-html/barplot-1.png" width="672" /></p>
 <p>Ceci n’est pas un histogramme ! C’est un diagramme en barres.
 La lisibilité est compliqué en raison de l’ordre des facteurs. Grâce aux fonctions vues précédemment, on peut modifier cet ordre :</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" data-line-number="1"><span class="kw">ggplot</span> (dat, <span class="kw">aes</span> (<span class="dt">x =</span> <span class="kw">fct_infreq</span> (ZAU2), <span class="dt">fill =</span> <span class="kw">fct_infreq</span> (ZAU2))) <span class="op">+</span></a>
-<a class="sourceLine" id="cb51-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_bar</span> () <span class="op">+</span></a>
-<a class="sourceLine" id="cb51-3" data-line-number="3"><span class="st">  </span><span class="kw">ggtitle</span> (<span class="st">&quot;Zonage en Aires Urbaines&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb51-4" data-line-number="4"><span class="st">  </span><span class="kw">xlab</span> (<span class="dt">label =</span> <span class="st">&quot;Classe typolgique ZAU&quot;</span>) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb51-5" data-line-number="5"><span class="st">  </span><span class="kw">ylab</span> (<span class="dt">label =</span> <span class="st">&quot;Nombre de communes&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb51-6" data-line-number="6"><span class="st">  </span><span class="kw">theme</span> (<span class="dt">axis.text.x =</span> <span class="kw">element_blank</span> ()) <span class="op">+</span></a>
-<a class="sourceLine" id="cb51-7" data-line-number="7"><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.title =</span> <span class="kw">element_blank</span>())</a></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="une-variable-qualitative.html#cb105-1" tabindex="-1"></a><span class="fu">ggplot</span> (dat, <span class="fu">aes</span> (<span class="at">x =</span> <span class="fu">fct_infreq</span> (ZAU2), <span class="at">fill =</span> <span class="fu">fct_infreq</span> (ZAU2))) <span class="sc">+</span></span>
+<span id="cb105-2"><a href="une-variable-qualitative.html#cb105-2" tabindex="-1"></a>  <span class="fu">geom_bar</span> () <span class="sc">+</span></span>
+<span id="cb105-3"><a href="une-variable-qualitative.html#cb105-3" tabindex="-1"></a>  <span class="fu">ggtitle</span> (<span class="st">&quot;Zonage en Aires Urbaines&quot;</span>) <span class="sc">+</span></span>
+<span id="cb105-4"><a href="une-variable-qualitative.html#cb105-4" tabindex="-1"></a>  <span class="fu">xlab</span> (<span class="at">label =</span> <span class="st">&quot;Classe typolgique ZAU&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb105-5"><a href="une-variable-qualitative.html#cb105-5" tabindex="-1"></a>  <span class="fu">ylab</span> (<span class="at">label =</span> <span class="st">&quot;Nombre de communes&quot;</span>) <span class="sc">+</span></span>
+<span id="cb105-6"><a href="une-variable-qualitative.html#cb105-6" tabindex="-1"></a>  <span class="fu">theme</span> (<span class="at">axis.text.x =</span> <span class="fu">element_blank</span> ()) <span class="sc">+</span></span>
+<span id="cb105-7"><a href="une-variable-qualitative.html#cb105-7" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span></code></pre></div>
 <p><img src="Statistiques-descriptives_files/figure-html/barplot2-1.png" width="672" /></p>
 <p>D’autres présentations sont possibles. Par exemple, avec les intitulés des modalités sur l’axe (obtenu grâce à <code>coord_flip()</code>, il n’y donc plus besoin de différencier par les couleurs, ni de la légende. La disposition en barres horizontales permet d’afficher ces intitulés longs.</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" data-line-number="1"><span class="kw">ggplot</span> (dat, <span class="kw">aes</span> (<span class="dt">x =</span> ZAU2)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb52-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_bar</span> () <span class="op">+</span></a>
-<a class="sourceLine" id="cb52-3" data-line-number="3"><span class="st">  </span><span class="kw">ggtitle</span> (<span class="st">&quot;Zonage en Aires Urbaines&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb52-4" data-line-number="4"><span class="st">  </span><span class="kw">ylab</span> (<span class="dt">label =</span> <span class="st">&quot;Nombre de communes&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb52-5" data-line-number="5"><span class="st">  </span><span class="kw">xlab</span> (<span class="st">&quot;&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb52-6" data-line-number="6"><span class="st">  </span><span class="kw">theme</span> (<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb52-7" data-line-number="7"><span class="st">  </span><span class="kw">coord_flip</span> ()</a></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="une-variable-qualitative.html#cb106-1" tabindex="-1"></a><span class="fu">ggplot</span> (dat, <span class="fu">aes</span> (<span class="at">x =</span> ZAU2)) <span class="sc">+</span></span>
+<span id="cb106-2"><a href="une-variable-qualitative.html#cb106-2" tabindex="-1"></a>  <span class="fu">geom_bar</span> () <span class="sc">+</span></span>
+<span id="cb106-3"><a href="une-variable-qualitative.html#cb106-3" tabindex="-1"></a>  <span class="fu">ggtitle</span> (<span class="st">&quot;Zonage en Aires Urbaines&quot;</span>) <span class="sc">+</span></span>
+<span id="cb106-4"><a href="une-variable-qualitative.html#cb106-4" tabindex="-1"></a>  <span class="fu">ylab</span> (<span class="at">label =</span> <span class="st">&quot;Nombre de communes&quot;</span>) <span class="sc">+</span></span>
+<span id="cb106-5"><a href="une-variable-qualitative.html#cb106-5" tabindex="-1"></a>  <span class="fu">xlab</span> (<span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
+<span id="cb106-6"><a href="une-variable-qualitative.html#cb106-6" tabindex="-1"></a>  <span class="fu">theme</span> (<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
+<span id="cb106-7"><a href="une-variable-qualitative.html#cb106-7" tabindex="-1"></a>  <span class="fu">coord_flip</span> ()</span></code></pre></div>
+<pre><code>## Warning in min(x): no non-missing arguments to min; returning Inf</code></pre>
+<pre><code>## Warning in max(x): no non-missing arguments to max; returning -Inf</code></pre>
+<pre><code>## Warning: Removed 36689 rows containing non-finite outside the scale range
+## (`stat_count()`).</code></pre>
 <p><img src="Statistiques-descriptives_files/figure-html/barplot_horiz-1.png" width="672" /></p>
 </div>
-<div id="diagramme-en-secteurs" class="section level3">
-<h3><span class="header-section-number">4.2.2</span> Diagramme en secteurs</h3>
+<div id="diagramme-en-secteurs" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Diagramme en secteurs<a href="une-variable-qualitative.html#diagramme-en-secteurs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Cette forme est à éviter autant que possible car sa lecture est moins facile que celle des diagrammes en barres. Elle s’obtient grâce à <code>coord_polar()</code>.</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb53-1" data-line-number="1"><span class="kw">ggplot</span> (dat, <span class="kw">aes</span> (<span class="dt">x =</span> <span class="dv">1</span>, <span class="dt">fill =</span> ZAU2)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb53-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_bar</span> () <span class="op">+</span></a>
-<a class="sourceLine" id="cb53-3" data-line-number="3"><span class="st">  </span><span class="kw">coord_polar</span> (<span class="dt">theta =</span> <span class="st">&quot;y&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="une-variable-qualitative.html#cb110-1" tabindex="-1"></a><span class="fu">ggplot</span> (dat, <span class="fu">aes</span> (<span class="at">x =</span> <span class="dv">1</span>, <span class="at">fill =</span> ZAU2)) <span class="sc">+</span></span>
+<span id="cb110-2"><a href="une-variable-qualitative.html#cb110-2" tabindex="-1"></a>  <span class="fu">geom_bar</span> () <span class="sc">+</span></span>
+<span id="cb110-3"><a href="une-variable-qualitative.html#cb110-3" tabindex="-1"></a>  <span class="fu">coord_polar</span> (<span class="at">theta =</span> <span class="st">&quot;y&quot;</span>)</span></code></pre></div>
 <p><img src="Statistiques-descriptives_files/figure-html/pie-1.png" width="672" /></p>
 
 </div>
@@ -429,12 +471,11 @@ La lisibilité est compliqué en raison de l’ordre des facteurs. Grâce aux fo
           </div>
         </div>
       </div>
-<a href="quelques-préliminaires.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="une-variable-quantitative.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="deux-variables-quantitatives.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -445,37 +486,42 @@ La lisibilité est compliqué en raison de l’ordre des facteurs. Grâce aux fo
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["Statistiques-descriptives.pdf", "Statistiques-descriptives.epub"],
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["Statistiques-descriptives.pdf", "Statistiques-descriptives.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>
@@ -486,7 +532,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
