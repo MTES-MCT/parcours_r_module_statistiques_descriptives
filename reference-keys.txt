@@ -1,5 +1,6 @@
 introduction
 le-parcours-de-formation
+le-groupe-de-référents-r-du-pôle-ministériel
 objectif-du-module-3
 notions-et-méthodes-présentées
 analyse-univariée-dune-variable-quantitative
@@ -10,6 +11,7 @@ relation-entre-une-variable-qualitative-et-une-variable-quantitative
 fondamentaux-r-présentés
 bien-commencer
 créer-un-projet-sous-rstudio-pour-vous-permettre-de-recencer-vos-travaux.
+créer-un-projet-sous-rstudio-pour-vous-permettre-de-recenser-vos-travaux.
 intégrer-vos-données
 créer-votre-arborescence-de-projet
 activer-les-packages-nécessaires
