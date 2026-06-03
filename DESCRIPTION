@@ -24,7 +24,7 @@ Imports:
   tidyverse, 
   visNetwork
 Remotes: 
-    maeltheuliere/COGiter
+    maeltheuliere/COGiter,
     haleyjeppson/ggmosaic
 License: MIT
 
