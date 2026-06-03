@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapitre 10 Exercice de synthèse | Statistiques descriptives</title>
   <meta name="description" content="Chapitre 10 Exercice de synthèse | Statistiques descriptives avec R (module 3)" />
-  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapitre 10 Exercice de synthèse | Statistiques descriptives" />
   <meta property="og:type" content="book" />
@@ -60,19 +60,20 @@
 <script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
-<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
-<script src="libs/plotly-binding-4.11.0/plotly.js"></script>
+<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
+<script src="libs/plotly-binding-4.12.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.25.2/plotly-latest.min.js"></script>
 <link href="libs/vis-9.1.0/vis-network.min.css" rel="stylesheet" />
 <script src="libs/vis-9.1.0/vis-network.min.js"></script>
 <script src="libs/visNetwork-binding-2.1.4/visNetwork.js"></script>
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -82,7 +83,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -160,35 +161,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#le-parcours-de-formation"><i class="fa fa-check"></i><b>1.1</b> Le parcours de formation</a></li>
-<li class="chapter" data-level="1.2" data-path="09-exercice.html"><a href="#le-groupe-de-r%C3%A9f%C3%A9rents-r-du-p%C3%B4le-minist%C3%A9riel"><i class="fa fa-check"></i><b>1.2</b> Le groupe de référents R du pôle ministériel</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#le-groupe-de-r%C3%A9f%C3%A9rents-r-du-p%C3%B4le-minist%C3%A9riel"><i class="fa fa-check"></i><b>1.2</b> Le groupe de référents R du pôle ministériel</a></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#objectif-du-module-3"><i class="fa fa-check"></i><b>1.3</b> Objectif du module 3</a></li>
-<li class="chapter" data-level="1.4" data-path="09-exercice.html"><a href="#notions-et-m%C3%A9thodes-pr%C3%A9sent%C3%A9es"><i class="fa fa-check"></i><b>1.4</b> Notions et méthodes présentées</a>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#notions-et-m%C3%A9thodes-pr%C3%A9sent%C3%A9es"><i class="fa fa-check"></i><b>1.4</b> Notions et méthodes présentées</a>
 <ul>
-<li class="chapter" data-level="1.4.1" data-path="09-exercice.html"><a href="#analyse-univari%C3%A9e-dune-variable-quantitative"><i class="fa fa-check"></i><b>1.4.1</b> Analyse univariée d’une variable quantitative</a></li>
-<li class="chapter" data-level="1.4.2" data-path="09-exercice.html"><a href="#analyse-univari%C3%A9e-dune-variable-qualitative"><i class="fa fa-check"></i><b>1.4.2</b> Analyse univariée d’une variable qualitative</a></li>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#analyse-univari%C3%A9e-dune-variable-quantitative"><i class="fa fa-check"></i><b>1.4.1</b> Analyse univariée d’une variable quantitative</a></li>
+<li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#analyse-univari%C3%A9e-dune-variable-qualitative"><i class="fa fa-check"></i><b>1.4.2</b> Analyse univariée d’une variable qualitative</a></li>
 <li class="chapter" data-level="1.4.3" data-path="index.html"><a href="index.html#relation-entre-2-variables-quantitatives"><i class="fa fa-check"></i><b>1.4.3</b> Relation entre 2 variables quantitatives</a></li>
 <li class="chapter" data-level="1.4.4" data-path="index.html"><a href="index.html#relation-entre-2-variables-qualitatives"><i class="fa fa-check"></i><b>1.4.4</b> Relation entre 2 variables qualitatives</a></li>
 <li class="chapter" data-level="1.4.5" data-path="index.html"><a href="index.html#relation-entre-une-variable-qualitative-et-une-variable-quantitative"><i class="fa fa-check"></i><b>1.4.5</b> Relation entre une variable qualitative et une variable quantitative</a></li>
 </ul></li>
-<li class="chapter" data-level="1.5" data-path="09-exercice.html"><a href="#fondamentaux-r-pr%C3%A9sent%C3%A9s"><i class="fa fa-check"></i><b>1.5</b> Fondamentaux R présentés</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#fondamentaux-r-pr%C3%A9sent%C3%A9s"><i class="fa fa-check"></i><b>1.5</b> Fondamentaux R présentés</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="bien-commencer.html"><a href="bien-commencer.html"><i class="fa fa-check"></i><b>2</b> Bien commencer</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="09-exercice.html"><a href="#cr%C3%A9er-un-projet-sous-rstudio-pour-vous-permettre-de-recencer-vos-travaux."><i class="fa fa-check"></i><b>2.1</b> Créer un projet sous Rstudio pour vous permettre de recencer vos travaux.</a></li>
-<li class="chapter" data-level="2.2" data-path="09-exercice.html"><a href="#cr%C3%A9er-un-projet-sous-rstudio-pour-vous-permettre-de-recenser-vos-travaux."><i class="fa fa-check"></i><b>2.2</b> Créer un projet sous Rstudio pour vous permettre de recenser vos travaux.</a></li>
-<li class="chapter" data-level="2.3" data-path="09-exercice.html"><a href="#int%C3%A9grer-vos-donn%C3%A9es"><i class="fa fa-check"></i><b>2.3</b> Intégrer vos données</a></li>
-<li class="chapter" data-level="2.4" data-path="09-exercice.html"><a href="#cr%C3%A9er-votre-arborescence-de-projet"><i class="fa fa-check"></i><b>2.4</b> Créer votre arborescence de projet</a></li>
-<li class="chapter" data-level="2.5" data-path="09-exercice.html"><a href="#activer-les-packages-n%C3%A9cessaires"><i class="fa fa-check"></i><b>2.5</b> Activer les packages nécessaires</a></li>
+<li class="chapter" data-level="2.1" data-path="bien-commencer.html"><a href="bien-commencer.html#cr%C3%A9er-un-projet-sous-rstudio-pour-vous-permettre-de-recencer-vos-travaux."><i class="fa fa-check"></i><b>2.1</b> Créer un projet sous Rstudio pour vous permettre de recencer vos travaux.</a></li>
+<li class="chapter" data-level="2.2" data-path="bien-commencer.html"><a href="bien-commencer.html#cr%C3%A9er-un-projet-sous-rstudio-pour-vous-permettre-de-recenser-vos-travaux."><i class="fa fa-check"></i><b>2.2</b> Créer un projet sous Rstudio pour vous permettre de recenser vos travaux.</a></li>
+<li class="chapter" data-level="2.3" data-path="bien-commencer.html"><a href="bien-commencer.html#int%C3%A9grer-vos-donn%C3%A9es"><i class="fa fa-check"></i><b>2.3</b> Intégrer vos données</a></li>
+<li class="chapter" data-level="2.4" data-path="bien-commencer.html"><a href="bien-commencer.html#cr%C3%A9er-votre-arborescence-de-projet"><i class="fa fa-check"></i><b>2.4</b> Créer votre arborescence de projet</a></li>
+<li class="chapter" data-level="2.5" data-path="bien-commencer.html"><a href="bien-commencer.html#activer-les-packages-n%C3%A9cessaires"><i class="fa fa-check"></i><b>2.5</b> Activer les packages nécessaires</a></li>
 <li class="chapter" data-level="2.6" data-path="bien-commencer.html"><a href="bien-commencer.html#bien-structurer-ses-projets-data"><i class="fa fa-check"></i><b>2.6</b> Bien structurer ses projets data</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="09-exercice.html"><a href="#quelques-pr%C3%A9liminaires"><i class="fa fa-check"></i><b>3</b> Quelques préliminaires</a>
+<li class="chapter" data-level="3" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html"><i class="fa fa-check"></i><b>3</b> Quelques préliminaires</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html"><i class="fa fa-check"></i><b>3.1</b> Vocabulaire</a></li>
-<li class="chapter" data-level="3.2" data-path="09-exercice.html"><a href="#donn%C3%A9es-utilis%C3%A9es-pour-la-formation"><i class="fa fa-check"></i><b>3.2</b> Données utilisées pour la formation</a></li>
+<li class="chapter" data-level="3.1" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html#vocabulaire"><i class="fa fa-check"></i><b>3.1</b> Vocabulaire</a></li>
+<li class="chapter" data-level="3.2" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html#donn%C3%A9es-utilis%C3%A9es-pour-la-formation"><i class="fa fa-check"></i><b>3.2</b> Données utilisées pour la formation</a></li>
 <li class="chapter" data-level="3.3" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html#variables-quantitatives"><i class="fa fa-check"></i><b>3.3</b> Variables quantitatives</a></li>
 <li class="chapter" data-level="3.4" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html#variables-qualitatives"><i class="fa fa-check"></i><b>3.4</b> Variables qualitatives</a>
 <ul>
-<li class="chapter" data-level="3.4.1" data-path="09-exercice.html"><a href="#d%C3%A9finition"><i class="fa fa-check"></i><b>3.4.1</b> Définition</a></li>
+<li class="chapter" data-level="3.4.1" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html#d%C3%A9finition"><i class="fa fa-check"></i><b>3.4.1</b> Définition</a></li>
 <li class="chapter" data-level="3.4.2" data-path="quelques-préliminaires.html"><a href="quelques-préliminaires.html#manipulation-des-factor"><i class="fa fa-check"></i><b>3.4.2</b> Manipulation des <code>factor</code></a></li>
 </ul></li>
 </ul></li>
@@ -196,111 +197,111 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="4.1" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#statistiques-de-distribution"><i class="fa fa-check"></i><b>4.1</b> Statistiques de distribution</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="09-exercice.html"><a href="#statistiques-robustes-aux-valeurs-extr%C3%AAmes"><i class="fa fa-check"></i><b>4.1.1</b> Statistiques robustes aux valeurs extrêmes</a></li>
-<li class="chapter" data-level="4.1.2" data-path="09-exercice.html"><a href="#statistiques-sensibles-aux-valeurs-extr%C3%AAmes"><i class="fa fa-check"></i><b>4.1.2</b> Statistiques sensibles aux valeurs extrêmes</a></li>
+<li class="chapter" data-level="4.1.1" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#statistiques-robustes-aux-valeurs-extr%C3%AAmes"><i class="fa fa-check"></i><b>4.1.1</b> Statistiques robustes aux valeurs extrêmes</a></li>
+<li class="chapter" data-level="4.1.2" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#statistiques-sensibles-aux-valeurs-extr%C3%AAmes"><i class="fa fa-check"></i><b>4.1.2</b> Statistiques sensibles aux valeurs extrêmes</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#calcul-sur-plusieurs-variables"><i class="fa fa-check"></i><b>4.2</b> Calcul sur plusieurs variables</a>
 <ul>
 <li class="chapter" data-level="4.2.1" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#exercice"><i class="fa fa-check"></i><b>4.2.1</b> Exercice</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="09-exercice.html"><a href="#repr%C3%A9sentations-graphiques"><i class="fa fa-check"></i><b>4.3</b> Représentations graphiques</a>
+<li class="chapter" data-level="4.3" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#repr%C3%A9sentations-graphiques"><i class="fa fa-check"></i><b>4.3</b> Représentations graphiques</a>
 <ul>
 <li class="chapter" data-level="4.3.1" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#histogramme"><i class="fa fa-check"></i><b>4.3.1</b> Histogramme</a></li>
-<li class="chapter" data-level="4.3.2" data-path="09-exercice.html"><a href="#la-fonction-de-r%C3%A9partition-cumulative"><i class="fa fa-check"></i><b>4.3.2</b> La fonction de répartition (cumulative)</a></li>
-<li class="chapter" data-level="4.3.3" data-path="09-exercice.html"><a href="#graphique-de-densit%C3%A9"><i class="fa fa-check"></i><b>4.3.3</b> Graphique de densité</a></li>
+<li class="chapter" data-level="4.3.2" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#la-fonction-de-r%C3%A9partition-cumulative"><i class="fa fa-check"></i><b>4.3.2</b> La fonction de répartition (cumulative)</a></li>
+<li class="chapter" data-level="4.3.3" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#graphique-de-densit%C3%A9"><i class="fa fa-check"></i><b>4.3.3</b> Graphique de densité</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="09-exercice.html"><a href="#discr%C3%A9tisation-dune-variable-continue"><i class="fa fa-check"></i><b>4.4</b> Discrétisation d’une variable continue</a>
+<li class="chapter" data-level="4.4" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#discr%C3%A9tisation-dune-variable-continue"><i class="fa fa-check"></i><b>4.4</b> Discrétisation d’une variable continue</a>
 <ul>
-<li class="chapter" data-level="4.4.1" data-path="09-exercice.html"><a href="#m%C3%A9thode-des-quantiles"><i class="fa fa-check"></i><b>4.4.1</b> Méthode des quantiles</a></li>
-<li class="chapter" data-level="4.4.2" data-path="09-exercice.html"><a href="#m%C3%A9thode-des-seuils-naturels-m%C3%A9thode-de-jenks"><i class="fa fa-check"></i><b>4.4.2</b> Méthode des seuils naturels (méthode de Jenks)</a></li>
+<li class="chapter" data-level="4.4.1" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#m%C3%A9thode-des-quantiles"><i class="fa fa-check"></i><b>4.4.1</b> Méthode des quantiles</a></li>
+<li class="chapter" data-level="4.4.2" data-path="une-variable-quantitative.html"><a href="une-variable-quantitative.html#m%C3%A9thode-des-seuils-naturels-m%C3%A9thode-de-jenks"><i class="fa fa-check"></i><b>4.4.2</b> Méthode des seuils naturels (méthode de Jenks)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html"><i class="fa fa-check"></i><b>5</b> Une variable qualitative</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="09-exercice.html"><a href="#tableaux-de-synth%C3%A8se"><i class="fa fa-check"></i><b>5.1</b> Tableaux de synthèse</a>
+<li class="chapter" data-level="5.1" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#tableaux-de-synth%C3%A8se"><i class="fa fa-check"></i><b>5.1</b> Tableaux de synthèse</a>
 <ul>
 <li class="chapter" data-level="5.1.1" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#comptage"><i class="fa fa-check"></i><b>5.1.1</b> Comptage</a></li>
-<li class="chapter" data-level="5.1.2" data-path="09-exercice.html"><a href="#comptage-pond%C3%A9r%C3%A9"><i class="fa fa-check"></i><b>5.1.2</b> Comptage pondéré</a></li>
-<li class="chapter" data-level="5.1.3" data-path="09-exercice.html"><a href="#fr%C3%A9quences"><i class="fa fa-check"></i><b>5.1.3</b> Fréquences</a></li>
-<li class="chapter" data-level="5.1.4" data-path="09-exercice.html"><a href="#fr%C3%A9quences-pond%C3%A9r%C3%A9es"><i class="fa fa-check"></i><b>5.1.4</b> Fréquences pondérées</a></li>
+<li class="chapter" data-level="5.1.2" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#comptage-pond%C3%A9r%C3%A9"><i class="fa fa-check"></i><b>5.1.2</b> Comptage pondéré</a></li>
+<li class="chapter" data-level="5.1.3" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#fr%C3%A9quences"><i class="fa fa-check"></i><b>5.1.3</b> Fréquences</a></li>
+<li class="chapter" data-level="5.1.4" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#fr%C3%A9quences-pond%C3%A9r%C3%A9es"><i class="fa fa-check"></i><b>5.1.4</b> Fréquences pondérées</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#graphiques"><i class="fa fa-check"></i><b>5.2</b> Graphiques</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="09-exercice.html"><a href="#diagramme-en-barres-ou-en-b%C3%A2tons"><i class="fa fa-check"></i><b>5.2.1</b> Diagramme en barres (ou en bâtons)</a></li>
+<li class="chapter" data-level="5.2.1" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#diagramme-en-barres-ou-en-b%C3%A2tons"><i class="fa fa-check"></i><b>5.2.1</b> Diagramme en barres (ou en bâtons)</a></li>
 <li class="chapter" data-level="5.2.2" data-path="une-variable-qualitative.html"><a href="une-variable-qualitative.html#diagramme-en-secteurs"><i class="fa fa-check"></i><b>5.2.2</b> Diagramme en secteurs</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html"><i class="fa fa-check"></i><b>6</b> Deux variables quantitatives</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="09-exercice.html"><a href="#repr%C3%A9sentations-graphiques-1"><i class="fa fa-check"></i><b>6.1</b> Représentations graphiques</a>
+<li class="chapter" data-level="6.1" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html#repr%C3%A9sentations-graphiques-1"><i class="fa fa-check"></i><b>6.1</b> Représentations graphiques</a>
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html#nuage-de-points"><i class="fa fa-check"></i><b>6.1.1</b> Nuage de points</a></li>
 <li class="chapter" data-level="6.1.2" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html#matrice-de-nuages-de-points"><i class="fa fa-check"></i><b>6.1.2</b> Matrice de nuages de points</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="09-exercice.html"><a href="#coefficients-de-corr%C3%A9lation"><i class="fa fa-check"></i><b>6.2</b> Coefficients de corrélation</a></li>
-<li class="chapter" data-level="6.3" data-path="09-exercice.html"><a href="#r%C3%A9gression"><i class="fa fa-check"></i><b>6.3</b> Régression</a>
+<li class="chapter" data-level="6.2" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html#coefficients-de-corr%C3%A9lation"><i class="fa fa-check"></i><b>6.2</b> Coefficients de corrélation</a></li>
+<li class="chapter" data-level="6.3" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html#r%C3%A9gression"><i class="fa fa-check"></i><b>6.3</b> Régression</a>
 <ul>
 <li class="chapter" data-level="6.3.1" data-path="deux-variables-quantitatives.html"><a href="deux-variables-quantitatives.html#exercice-1"><i class="fa fa-check"></i><b>6.3.1</b> Exercice</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html"><i class="fa fa-check"></i><b>7</b> Deux variables qualitatives</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="09-exercice.html"><a href="#d%C3%A9finitions"><i class="fa fa-check"></i><b>7.1</b> Définitions</a></li>
-<li class="chapter" data-level="7.2" data-path="09-exercice.html"><a href="#tableaux-de-synth%C3%A8se-1"><i class="fa fa-check"></i><b>7.2</b> Tableaux de synthèse</a>
+<li class="chapter" data-level="7.1" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#d%C3%A9finitions"><i class="fa fa-check"></i><b>7.1</b> Définitions</a></li>
+<li class="chapter" data-level="7.2" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#tableaux-de-synth%C3%A8se-1"><i class="fa fa-check"></i><b>7.2</b> Tableaux de synthèse</a>
 <ul>
 <li class="chapter" data-level="7.2.1" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#tableau-de-contingence-effectifs"><i class="fa fa-check"></i><b>7.2.1</b> Tableau de contingence (effectifs)</a></li>
-<li class="chapter" data-level="7.2.2" data-path="09-exercice.html"><a href="#tableau-des-fr%C3%A9quences"><i class="fa fa-check"></i><b>7.2.2</b> Tableau des fréquences</a></li>
+<li class="chapter" data-level="7.2.2" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#tableau-des-fr%C3%A9quences"><i class="fa fa-check"></i><b>7.2.2</b> Tableau des fréquences</a></li>
 <li class="chapter" data-level="7.2.3" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#profils-ligne"><i class="fa fa-check"></i><b>7.2.3</b> Profils-ligne</a></li>
 <li class="chapter" data-level="7.2.4" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#profils-colonne"><i class="fa fa-check"></i><b>7.2.4</b> Profils-colonne</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#graphiques-1"><i class="fa fa-check"></i><b>7.3</b> Graphiques</a>
 <ul>
-<li class="chapter" data-level="7.3.1" data-path="09-exercice.html"><a href="#diagramme-en-b%C3%A2tons"><i class="fa fa-check"></i><b>7.3.1</b> Diagramme en bâtons</a></li>
-<li class="chapter" data-level="7.3.2" data-path="09-exercice.html"><a href="#graphique-mosa%C3%AFque"><i class="fa fa-check"></i><b>7.3.2</b> Graphique mosaïque</a></li>
+<li class="chapter" data-level="7.3.1" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#diagramme-en-b%C3%A2tons"><i class="fa fa-check"></i><b>7.3.1</b> Diagramme en bâtons</a></li>
+<li class="chapter" data-level="7.3.2" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#graphique-mosa%C3%AFque"><i class="fa fa-check"></i><b>7.3.2</b> Graphique mosaïque</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="09-exercice.html"><a href="#avec-pond%C3%A9ration"><i class="fa fa-check"></i><b>7.4</b> Avec pondération</a></li>
+<li class="chapter" data-level="7.4" data-path="deux-variables-qualitatives.html"><a href="deux-variables-qualitatives.html#avec-pond%C3%A9ration"><i class="fa fa-check"></i><b>7.4</b> Avec pondération</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="lien-variable-quantitative---variable-qualitative.html"><a href="lien-variable-quantitative---variable-qualitative.html"><i class="fa fa-check"></i><b>8</b> Lien variable quantitative - variable qualitative</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="lien-variable-quantitative---variable-qualitative.html"><a href="lien-variable-quantitative---variable-qualitative.html#statistiques-en-fonction-dun-facteur"><i class="fa fa-check"></i><b>8.1</b> Statistiques en fonction d’un facteur</a></li>
-<li class="chapter" data-level="8.2" data-path="09-exercice.html"><a href="#el%C3%A9ments-th%C3%A9oriques"><i class="fa fa-check"></i><b>8.2</b> Eléments théoriques</a></li>
-<li class="chapter" data-level="8.3" data-path="09-exercice.html"><a href="#repr%C3%A9sentation-graphique"><i class="fa fa-check"></i><b>8.3</b> Représentation graphique</a></li>
-<li class="chapter" data-level="8.4" data-path="09-exercice.html"><a href="#calcul-du-rapport-de-corr%C3%A9lation"><i class="fa fa-check"></i><b>8.4</b> Calcul du rapport de corrélation</a></li>
+<li class="chapter" data-level="8.2" data-path="lien-variable-quantitative---variable-qualitative.html"><a href="lien-variable-quantitative---variable-qualitative.html#el%C3%A9ments-th%C3%A9oriques"><i class="fa fa-check"></i><b>8.2</b> Eléments théoriques</a></li>
+<li class="chapter" data-level="8.3" data-path="lien-variable-quantitative---variable-qualitative.html"><a href="lien-variable-quantitative---variable-qualitative.html#repr%C3%A9sentation-graphique"><i class="fa fa-check"></i><b>8.3</b> Représentation graphique</a></li>
+<li class="chapter" data-level="8.4" data-path="lien-variable-quantitative---variable-qualitative.html"><a href="lien-variable-quantitative---variable-qualitative.html#calcul-du-rapport-de-corr%C3%A9lation"><i class="fa fa-check"></i><b>8.4</b> Calcul du rapport de corrélation</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="tests.html"><a href="tests.html"><i class="fa fa-check"></i><b>9</b> Tests</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="tests.html"><a href="tests.html#sur-une-variable-quantitative"><i class="fa fa-check"></i><b>9.1</b> Sur une variable quantitative</a>
 <ul>
 <li class="chapter" data-level="9.1.1" data-path="tests.html"><a href="tests.html#la-distribution-est-elle-normale"><i class="fa fa-check"></i><b>9.1.1</b> La distribution est-elle normale ?</a></li>
-<li class="chapter" data-level="9.1.2" data-path="09-exercice.html"><a href="#la-moyenne-diff%C3%A8re-t-elle-de-la-valeur-attendue"><i class="fa fa-check"></i><b>9.1.2</b> La moyenne diffère-t-elle de la valeur attendue ?</a></li>
+<li class="chapter" data-level="9.1.2" data-path="tests.html"><a href="tests.html#la-moyenne-diff%C3%A8re-t-elle-de-la-valeur-attendue"><i class="fa fa-check"></i><b>9.1.2</b> La moyenne diffère-t-elle de la valeur attendue ?</a></li>
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="tests.html"><a href="tests.html#sur-une-variable-qualitative"><i class="fa fa-check"></i><b>9.2</b> Sur une variable qualitative</a>
 <ul>
-<li class="chapter" data-level="9.2.1" data-path="09-exercice.html"><a href="#la-distribution-des-observations-diff%C3%A8re-t-elle-de-celle-attendue"><i class="fa fa-check"></i><b>9.2.1</b> La distribution des observations diffère-t-elle de celle attendue ?</a></li>
+<li class="chapter" data-level="9.2.1" data-path="tests.html"><a href="tests.html#la-distribution-des-observations-diff%C3%A8re-t-elle-de-celle-attendue"><i class="fa fa-check"></i><b>9.2.1</b> La distribution des observations diffère-t-elle de celle attendue ?</a></li>
 </ul></li>
 <li class="chapter" data-level="9.3" data-path="tests.html"><a href="tests.html#sur-2-variables-qualitatives"><i class="fa fa-check"></i><b>9.3</b> Sur 2 variables qualitatives</a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="09-exercice.html"><a href="#les-deux-variables-qualitatives-sont-elles-ind%C3%A9pendantes-lune-de-lautre"><i class="fa fa-check"></i><b>9.3.1</b> Les deux variables qualitatives sont-elles indépendantes l’une de l’autre ?</a></li>
-<li class="chapter" data-level="9.3.2" data-path="09-exercice.html"><a href="#un-couple-de-variables-qualitatives-est-il-li%C3%A9-plus-fortement-quun-autre-couple"><i class="fa fa-check"></i><b>9.3.2</b> Un couple de variables qualitatives est-il “lié plus fortement” qu’un autre couple ?</a></li>
+<li class="chapter" data-level="9.3.1" data-path="tests.html"><a href="tests.html#les-deux-variables-qualitatives-sont-elles-ind%C3%A9pendantes-lune-de-lautre"><i class="fa fa-check"></i><b>9.3.1</b> Les deux variables qualitatives sont-elles indépendantes l’une de l’autre ?</a></li>
+<li class="chapter" data-level="9.3.2" data-path="tests.html"><a href="tests.html#un-couple-de-variables-qualitatives-est-il-li%C3%A9-plus-fortement-quun-autre-couple"><i class="fa fa-check"></i><b>9.3.2</b> Un couple de variables qualitatives est-il “lié plus fortement” qu’un autre couple ?</a></li>
 </ul></li>
 <li class="chapter" data-level="9.4" data-path="tests.html"><a href="tests.html#sur-un-croisement-quantitatifqualitatif"><i class="fa fa-check"></i><b>9.4</b> Sur un croisement quantitatif/qualitatif</a>
 <ul>
-<li class="chapter" data-level="9.4.1" data-path="09-exercice.html"><a href="#%C3%A9chantillons-ind%C3%A9pendants"><i class="fa fa-check"></i><b>9.4.1</b> 2 échantillons indépendants</a></li>
-<li class="chapter" data-level="9.4.2" data-path="09-exercice.html"><a href="#%C3%A9chantillons-d%C3%A9pendants"><i class="fa fa-check"></i><b>9.4.2</b> 2 échantillons dépendants</a></li>
-<li class="chapter" data-level="9.4.3" data-path="09-exercice.html"><a href="#plusieurs-%C3%A9chantillons-ind%C3%A9pendants"><i class="fa fa-check"></i><b>9.4.3</b> Plusieurs échantillons indépendants</a></li>
+<li class="chapter" data-level="9.4.1" data-path="tests.html"><a href="tests.html#%C3%A9chantillons-ind%C3%A9pendants"><i class="fa fa-check"></i><b>9.4.1</b> 2 échantillons indépendants</a></li>
+<li class="chapter" data-level="9.4.2" data-path="tests.html"><a href="tests.html#%C3%A9chantillons-d%C3%A9pendants"><i class="fa fa-check"></i><b>9.4.2</b> 2 échantillons dépendants</a></li>
+<li class="chapter" data-level="9.4.3" data-path="tests.html"><a href="tests.html#plusieurs-%C3%A9chantillons-ind%C3%A9pendants"><i class="fa fa-check"></i><b>9.4.3</b> Plusieurs échantillons indépendants</a></li>
 </ul></li>
-<li class="chapter" data-level="9.5" data-path="09-exercice.html"><a href="#r%C3%A9sum%C3%A9"><i class="fa fa-check"></i><b>9.5</b> Résumé</a></li>
+<li class="chapter" data-level="9.5" data-path="tests.html"><a href="tests.html#r%C3%A9sum%C3%A9"><i class="fa fa-check"></i><b>9.5</b> Résumé</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="09-exercice.html"><a href="#exercice-de-synth%C3%A8se"><i class="fa fa-check"></i><b>10</b> Exercice de synthèse</a>
+<li class="chapter" data-level="10" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html"><i class="fa fa-check"></i><b>10</b> Exercice de synthèse</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="09-exercice.html"><a href="#enonc%C3%A9"><i class="fa fa-check"></i><b>10.1</b> Enoncé</a>
+<li class="chapter" data-level="10.1" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#enonc%C3%A9"><i class="fa fa-check"></i><b>10.1</b> Enoncé</a>
 <ul>
-<li class="chapter" data-level="10.1.1" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html"><i class="fa fa-check"></i><b>10.1.1</b> Partie 1</a></li>
+<li class="chapter" data-level="10.1.1" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-1"><i class="fa fa-check"></i><b>10.1.1</b> Partie 1</a></li>
 <li class="chapter" data-level="10.1.2" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-2"><i class="fa fa-check"></i><b>10.1.2</b> Partie 2</a></li>
 <li class="chapter" data-level="10.1.3" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-3"><i class="fa fa-check"></i><b>10.1.3</b> Partie 3</a></li>
 <li class="chapter" data-level="10.1.4" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-4"><i class="fa fa-check"></i><b>10.1.4</b> Partie 4</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="09-exercice.html"><a href="#corrig%C3%A9"><i class="fa fa-check"></i><b>10.2</b> Corrigé</a>
+<li class="chapter" data-level="10.2" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#corrig%C3%A9"><i class="fa fa-check"></i><b>10.2</b> Corrigé</a>
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-1-1"><i class="fa fa-check"></i><b>10.2.1</b> Partie 1</a></li>
 <li class="chapter" data-level="10.2.2" data-path="exercice-de-synthèse.html"><a href="exercice-de-synthèse.html#partie-2-1"><i class="fa fa-check"></i><b>10.2.2</b> Partie 2</a></li>
@@ -330,9 +331,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="exercice-de-synthèse" class="section level1 hasAnchor" number="10">
-<h1><span class="header-section-number">Chapitre 10</span> Exercice de synthèse<a href="#exercice-de-synth%C3%A8se" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Chapitre 10</span> Exercice de synthèse<a href="exercice-de-synthèse.html#exercice-de-synth%C3%A8se" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="enoncé" class="section level2 hasAnchor" number="10.1">
-<h2><span class="header-section-number">10.1</span> Enoncé<a href="#enonc%C3%A9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">10.1</span> Enoncé<a href="exercice-de-synthèse.html#enonc%C3%A9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Créer un un sous-jeu de données constitué des 15 premières colonnes de la base Insee restreint à la région des Pays-de-la-Loire (code REG 52). Supprimer les modalités inutiles des variables qualitatives.</p>
 <div id="partie-1" class="section level3 hasAnchor" number="10.1.1">
 <h3><span class="header-section-number">10.1.1</span> Partie 1<a href="exercice-de-synthèse.html#partie-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -367,7 +368,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div id="corrigé" class="section level2 hasAnchor" number="10.2">
-<h2><span class="header-section-number">10.2</span> Corrigé<a href="#corrig%C3%A9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">10.2</span> Corrigé<a href="exercice-de-synthèse.html#corrig%C3%A9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Les questions étant ouvertes, il y a de nombreuses façons d’y répondre. Ci-dessous certaines d’entre elles.</p>
 <p>Créer un sous-jeu de données constitué des 15 premières colonnes de la base Insee restreint à la région des Pays-de-la-Loire (code REG 52)</p>
 <div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="exercice-de-synthèse.html#cb214-1" tabindex="-1"></a>pdl <span class="ot">&lt;-</span> dat <span class="sc">%&gt;%</span> </span>
@@ -375,76 +376,76 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb214-3"><a href="exercice-de-synthèse.html#cb214-3" tabindex="-1"></a>  <span class="fu">filter</span> (REG <span class="sc">==</span> <span class="st">&quot;52&quot;</span>)</span>
 <span id="cb214-4"><a href="exercice-de-synthèse.html#cb214-4" tabindex="-1"></a></span>
 <span id="cb214-5"><a href="exercice-de-synthèse.html#cb214-5" tabindex="-1"></a><span class="fu">summary</span> (pdl)</span></code></pre></div>
-<pre><code>##     CODGEO             LIBGEO               REG           DEP           
-##  Length:1502        Length:1502        52     :1502   Length:1502       
-##  Class :character   Class :character   01     :   0   Class :character  
-##  Mode  :character   Mode  :character   02     :   0   Mode  :character  
-##                                        03     :   0                     
-##                                        04     :   0                     
-##                                        11     :   0                     
-##                                        (Other):   0                     
-##      ZAU                 ZE               P14_POP          P09_POP      
-##  Length:1502        Length:1502        Min.   :    12   Min.   :    17  
-##  Class :character   Class :character   1st Qu.:   495   1st Qu.:   481  
-##  Mode  :character   Mode  :character   Median :  1029   Median :   978  
-##                                        Mean   :  2720   Mean   :  2608  
-##                                        3rd Qu.:  2353   3rd Qu.:  2243  
-##                                        Max.   :298029   Max.   :282047  
-##                                        NA&#39;s   :145      NA&#39;s   :145     
+<pre><code>##        CODGEO           LIBGEO          REG              DEP      
+##  Length   :1502   Length   :1502   52     :1502   Length   :1502  
+##  N.unique :1502   N.unique :1489   01     :   0   N.unique :   5  
+##  N.blank  :   0   N.blank  :   0   02     :   0   N.blank  :   0  
+##  Min.nchar:   5   Min.nchar:   3   03     :   0   Min.nchar:   2  
+##  Max.nchar:   5   Max.nchar:  35   04     :   0   Max.nchar:   2  
+##                                    11     :   0                   
+##                                    (Other):   0                   
+##         ZAU               ZE          P14_POP          P09_POP      
+##  Length   :1502   Length   :1502   Min.   :    12   Min.   :    17  
+##  N.unique :   9   N.unique :  20   1st Qu.:   495   1st Qu.:   481  
+##  N.blank  :   0   N.blank  :   0   Median :  1029   Median :   978  
+##  Min.nchar:  30   Min.nchar:  12   Mean   :  2720   Mean   :  2608  
+##  Max.nchar:  47   Max.nchar:  26   3rd Qu.:  2353   3rd Qu.:  2243  
+##                                    Max.   :298029   Max.   :282047  
+##                                    NAs    :145      NAs    :145     
 ##      SUPERF          NAIS0914          DECE0914         P14_MEN         
-##  Min.   :  0.20   Min.   :    1.0   Min.   :   0.0   Min.   :     5.45  
-##  1st Qu.: 11.76   1st Qu.:   33.0   1st Qu.:  15.0   1st Qu.:   196.52  
-##  Median : 17.96   Median :   69.0   Median :  31.0   Median :   402.51  
-##  Mean   : 23.64   Mean   :  166.3   Mean   : 113.1   Mean   :  1183.32  
-##  3rd Qu.: 28.53   3rd Qu.:  147.0   3rd Qu.: 107.0   3rd Qu.:   952.00  
-##  Max.   :323.98   Max.   :19814.0   Max.   :9968.0   Max.   :155272.72  
-##  NA&#39;s   :145      NA&#39;s   :145       NA&#39;s   :145      NA&#39;s   :145        
+##  Min.   :  0.20   Min.   :    1.0   Min.   :   0.0   Min.   :5.455e+00  
+##  1st Qu.: 11.76   1st Qu.:   33.0   1st Qu.:  15.0   1st Qu.:1.965e+02  
+##  Median : 17.96   Median :   69.0   Median :  31.0   Median :4.025e+02  
+##  Mean   : 23.64   Mean   :  166.3   Mean   : 113.1   Mean   :1.183e+03  
+##  3rd Qu.: 28.53   3rd Qu.:  147.0   3rd Qu.: 107.0   3rd Qu.:9.520e+02  
+##  Max.   :323.98   Max.   :19814.0   Max.   :9968.0   Max.   :1.553e+05  
+##  NAs    :145      NAs    :145       NAs    :145      NAs    :145        
 ##     NAISD15           DECESD15          P14_LOG         
-##  Min.   :   0.00   Min.   :   0.00   Min.   :    11.45  
+##  Min.   :   0.00   Min.   :   0.00   Min.   :    11.46  
 ##  1st Qu.:   5.00   1st Qu.:   3.00   1st Qu.:   246.94  
 ##  Median :  12.00   Median :   7.00   Median :   483.02  
 ##  Mean   :  30.99   Mean   :  24.96   Mean   :  1427.59  
 ##  3rd Qu.:  26.00   3rd Qu.:  23.00   3rd Qu.:  1108.68  
 ##  Max.   :4011.00   Max.   :2146.00   Max.   :171979.65  
-##  NA&#39;s   :145       NA&#39;s   :145       NA&#39;s   :145</code></pre>
+##  NAs    :145       NAs    :145       NAs    :145</code></pre>
 <p>On a toujours les anciens codes régions et départements qui sont désormais inutiles.</p>
 <div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="exercice-de-synthèse.html#cb216-1" tabindex="-1"></a>pdl <span class="ot">&lt;-</span> pdl <span class="sc">%&gt;%</span></span>
 <span id="cb216-2"><a href="exercice-de-synthèse.html#cb216-2" tabindex="-1"></a>  <span class="fu">droplevels</span> () <span class="sc">%&gt;%</span></span>
 <span id="cb216-3"><a href="exercice-de-synthèse.html#cb216-3" tabindex="-1"></a>  <span class="fu">select</span> (<span class="sc">-</span>REG)</span>
 <span id="cb216-4"><a href="exercice-de-synthèse.html#cb216-4" tabindex="-1"></a></span>
 <span id="cb216-5"><a href="exercice-de-synthèse.html#cb216-5" tabindex="-1"></a><span class="fu">summary</span> (pdl)</span></code></pre></div>
-<pre><code>##     CODGEO             LIBGEO              DEP                ZAU           
-##  Length:1502        Length:1502        Length:1502        Length:1502       
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##                                                                             
-##                                                                             
-##                                                                             
-##                                                                             
-##       ZE               P14_POP          P09_POP           SUPERF      
-##  Length:1502        Min.   :    12   Min.   :    17   Min.   :  0.20  
-##  Class :character   1st Qu.:   495   1st Qu.:   481   1st Qu.: 11.76  
-##  Mode  :character   Median :  1029   Median :   978   Median : 17.96  
-##                     Mean   :  2720   Mean   :  2608   Mean   : 23.64  
-##                     3rd Qu.:  2353   3rd Qu.:  2243   3rd Qu.: 28.53  
-##                     Max.   :298029   Max.   :282047   Max.   :323.98  
-##                     NA&#39;s   :145      NA&#39;s   :145      NA&#39;s   :145     
+<pre><code>##        CODGEO           LIBGEO            DEP              ZAU      
+##  Length   :1502   Length   :1502   Length   :1502   Length   :1502  
+##  N.unique :1502   N.unique :1489   N.unique :   5   N.unique :   9  
+##  N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  
+##  Min.nchar:   5   Min.nchar:   3   Min.nchar:   2   Min.nchar:  30  
+##  Max.nchar:   5   Max.nchar:  35   Max.nchar:   2   Max.nchar:  47  
+##                                                                     
+##                                                                     
+##          ZE          P14_POP          P09_POP           SUPERF      
+##  Length   :1502   Min.   :    12   Min.   :    17   Min.   :  0.20  
+##  N.unique :  20   1st Qu.:   495   1st Qu.:   481   1st Qu.: 11.76  
+##  N.blank  :   0   Median :  1029   Median :   978   Median : 17.96  
+##  Min.nchar:  12   Mean   :  2720   Mean   :  2608   Mean   : 23.64  
+##  Max.nchar:  26   3rd Qu.:  2353   3rd Qu.:  2243   3rd Qu.: 28.53  
+##                   Max.   :298029   Max.   :282047   Max.   :323.98  
+##                   NAs    :145      NAs    :145      NAs    :145     
 ##     NAIS0914          DECE0914         P14_MEN             NAISD15       
-##  Min.   :    1.0   Min.   :   0.0   Min.   :     5.45   Min.   :   0.00  
-##  1st Qu.:   33.0   1st Qu.:  15.0   1st Qu.:   196.52   1st Qu.:   5.00  
-##  Median :   69.0   Median :  31.0   Median :   402.51   Median :  12.00  
-##  Mean   :  166.3   Mean   : 113.1   Mean   :  1183.32   Mean   :  30.99  
-##  3rd Qu.:  147.0   3rd Qu.: 107.0   3rd Qu.:   952.00   3rd Qu.:  26.00  
-##  Max.   :19814.0   Max.   :9968.0   Max.   :155272.72   Max.   :4011.00  
-##  NA&#39;s   :145       NA&#39;s   :145      NA&#39;s   :145         NA&#39;s   :145      
+##  Min.   :    1.0   Min.   :   0.0   Min.   :5.455e+00   Min.   :   0.00  
+##  1st Qu.:   33.0   1st Qu.:  15.0   1st Qu.:1.965e+02   1st Qu.:   5.00  
+##  Median :   69.0   Median :  31.0   Median :4.025e+02   Median :  12.00  
+##  Mean   :  166.3   Mean   : 113.1   Mean   :1.183e+03   Mean   :  30.99  
+##  3rd Qu.:  147.0   3rd Qu.: 107.0   3rd Qu.:9.520e+02   3rd Qu.:  26.00  
+##  Max.   :19814.0   Max.   :9968.0   Max.   :1.553e+05   Max.   :4011.00  
+##  NAs    :145       NAs    :145      NAs    :145         NAs    :145      
 ##     DECESD15          P14_LOG         
-##  Min.   :   0.00   Min.   :    11.45  
+##  Min.   :   0.00   Min.   :    11.46  
 ##  1st Qu.:   3.00   1st Qu.:   246.94  
 ##  Median :   7.00   Median :   483.02  
 ##  Mean   :  24.96   Mean   :  1427.59  
 ##  3rd Qu.:  23.00   3rd Qu.:  1108.68  
 ##  Max.   :2146.00   Max.   :171979.65  
-##  NA&#39;s   :145       NA&#39;s   :145</code></pre>
+##  NAs    :145       NAs    :145</code></pre>
 <div id="partie-1-1" class="section level3 hasAnchor" number="10.2.1">
 <h3><span class="header-section-number">10.2.1</span> Partie 1<a href="exercice-de-synthèse.html#partie-1-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Objectif : bien décrire la variable population communale (P14_POP)</p>
@@ -475,7 +476,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb224-3"><a href="exercice-de-synthèse.html#cb224-3" tabindex="-1"></a>  <span class="fu">geom_vline</span> (<span class="at">xintercept =</span> pop_med_pdl, <span class="at">color =</span> <span class="st">&#39;orange&#39;</span>) <span class="sc">+</span></span>
 <span id="cb224-4"><a href="exercice-de-synthèse.html#cb224-4" tabindex="-1"></a>  <span class="fu">geom_vline</span> (<span class="at">xintercept =</span> pop_moy_pdl, <span class="at">color =</span> <span class="st">&#39;green&#39;</span>)</span>
 <span id="cb224-5"><a href="exercice-de-synthèse.html#cb224-5" tabindex="-1"></a>graphique</span></code></pre></div>
-<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-76-1.png" width="672" /></p>
+<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-76-1.png" alt="" width="672" /></p>
 <p>… n’est pas bien lisible. Un peu de mise en forme s’impose.</p>
 <div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="exercice-de-synthèse.html#cb225-1" tabindex="-1"></a>graphique <span class="ot">&lt;-</span> graphique <span class="sc">+</span></span>
 <span id="cb225-2"><a href="exercice-de-synthèse.html#cb225-2" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span> (<span class="at">trans =</span> <span class="st">&#39;log10&#39;</span>,</span>
@@ -485,7 +486,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb225-6"><a href="exercice-de-synthèse.html#cb225-6" tabindex="-1"></a>  <span class="fu">ylab</span> (<span class="st">&#39;Nombre de communes&#39;</span>)</span>
 <span id="cb225-7"><a href="exercice-de-synthèse.html#cb225-7" tabindex="-1"></a></span>
 <span id="cb225-8"><a href="exercice-de-synthèse.html#cb225-8" tabindex="-1"></a>graphique</span></code></pre></div>
-<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
+<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-77-1.png" alt="" width="672" /></p>
 <p>On peut encore rendre le graphique plus “auto-porteur”.</p>
 <div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="exercice-de-synthèse.html#cb226-1" tabindex="-1"></a>graphique <span class="ot">&lt;-</span> graphique <span class="sc">+</span></span>
 <span id="cb226-2"><a href="exercice-de-synthèse.html#cb226-2" tabindex="-1"></a>  <span class="fu">annotate</span> (<span class="at">geom =</span> <span class="st">&#39;text&#39;</span>, <span class="at">x =</span> pop_med_pdl<span class="dv">-200</span>, <span class="at">y =</span> <span class="dv">50</span>,</span>
@@ -496,7 +497,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb226-7"><a href="exercice-de-synthèse.html#cb226-7" tabindex="-1"></a>            <span class="at">angle =</span> <span class="dv">90</span>, <span class="at">color =</span> <span class="st">&#39;green&#39;</span>)</span>
 <span id="cb226-8"><a href="exercice-de-synthèse.html#cb226-8" tabindex="-1"></a></span>
 <span id="cb226-9"><a href="exercice-de-synthèse.html#cb226-9" tabindex="-1"></a>graphique</span></code></pre></div>
-<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
+<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-78-1.png" alt="" width="672" /></p>
 <p>Produire un graphique comparant les distributions entre les départements des Pays-de-la-Loire</p>
 <div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="exercice-de-synthèse.html#cb227-1" tabindex="-1"></a>medianes <span class="ot">&lt;-</span> pdl <span class="sc">%&gt;%</span> </span>
 <span id="cb227-2"><a href="exercice-de-synthèse.html#cb227-2" tabindex="-1"></a>  <span class="fu">group_by</span> (DEP) <span class="sc">%&gt;%</span></span>
@@ -513,7 +514,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb229-8"><a href="exercice-de-synthèse.html#cb229-8" tabindex="-1"></a>  <span class="fu">ggtitle</span> (<span class="st">&#39;Région Pays-de-la-Loire&#39;</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 145 rows containing non-finite outside the scale range
 ## (`stat_boxplot()`).</code></pre>
-<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
+<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-79-1.png" alt="" width="672" /></p>
 </div>
 <div id="partie-2-1" class="section level3 hasAnchor" number="10.2.2">
 <h3><span class="header-section-number">10.2.2</span> Partie 2<a href="exercice-de-synthèse.html#partie-2-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -541,7 +542,7 @@ Réfléchir aux questions :
 ## log-10 transformation introduced infinite values.</code></pre>
 <pre><code>## Warning: Removed 827 rows containing non-finite outside the scale range
 ## (`stat_density()`).</code></pre>
-<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-81-1.png" width="672" /></p>
+<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-81-1.png" alt="" width="672" /></p>
 <p>Alors, un ou deux échantillons ?</p>
 <p>Si l’on considère 2 échantillons :</p>
 <div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="exercice-de-synthèse.html#cb236-1" tabindex="-1"></a><span class="fu">t.test</span> (P14_POP <span class="sc">~</span> groupe, <span class="at">var.equal =</span> <span class="cn">TRUE</span>, <span class="at">data =</span> dat) <span class="co"># Student</span></span></code></pre></div>
@@ -630,7 +631,7 @@ Réfléchir aux questions :
 <span id="cb247-13"><a href="exercice-de-synthèse.html#cb247-13" tabindex="-1"></a>  <span class="fu">annotate</span> (<span class="at">geom =</span> <span class="st">&#39;text&#39;</span>, <span class="at">x =</span> pop_moy_cvdl<span class="dv">-500</span>, <span class="at">y =</span> <span class="dv">50</span>,</span>
 <span id="cb247-14"><a href="exercice-de-synthèse.html#cb247-14" tabindex="-1"></a>            <span class="at">label =</span> <span class="fu">paste</span> (<span class="st">&#39;Moyenne&#39;</span>, <span class="st">&#39;:&#39;</span>, pop_moy_cvdl, <span class="st">&#39;hab.&#39;</span>),</span>
 <span id="cb247-15"><a href="exercice-de-synthèse.html#cb247-15" tabindex="-1"></a>            <span class="at">angle =</span> <span class="dv">90</span>, <span class="at">color =</span> <span class="st">&#39;green&#39;</span>)</span></code></pre></div>
-<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-85-1.png" width="672" /></p>
+<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-85-1.png" alt="" width="672" /></p>
 <p>Tester la significativité</p>
 <div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="exercice-de-synthèse.html#cb248-1" tabindex="-1"></a>cvdl_vs_pdl <span class="ot">&lt;-</span> dat <span class="sc">%&gt;%</span></span>
 <span id="cb248-2"><a href="exercice-de-synthèse.html#cb248-2" tabindex="-1"></a>  <span class="fu">filter</span> (REG <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">52</span>, <span class="dv">24</span>))</span>
@@ -776,17 +777,17 @@ Réfléchir aux questions :
 <span id="cb269-4"><a href="exercice-de-synthèse.html#cb269-4" tabindex="-1"></a>  <span class="fu">mutate</span> (<span class="at">taux_emploi =</span> P09_EMPLT <span class="sc">/</span> P09_POP,</span>
 <span id="cb269-5"><a href="exercice-de-synthèse.html#cb269-5" tabindex="-1"></a>          <span class="at">densite_pop =</span> P14_POP <span class="sc">/</span> SUPERF)</span>
 <span id="cb269-6"><a href="exercice-de-synthèse.html#cb269-6" tabindex="-1"></a><span class="fu">summary</span>(data_p4<span class="sc">$</span>taux_emploi)</span></code></pre></div>
-<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
-## 0.00979 0.13147 0.18493 0.24570 0.29610 1.59801     145</code></pre>
+<pre><code>##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.      NAs 
+## 0.009788 0.131472 0.184934 0.245697 0.296100 1.598013      145</code></pre>
 <p>Avant de regarder le lien entre les deux variables, on les examine chacune à leur tour.</p>
 <div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb271-1"><a href="exercice-de-synthèse.html#cb271-1" tabindex="-1"></a><span class="fu">ggplot</span> (<span class="at">data =</span> data_p4, <span class="fu">aes</span> (<span class="at">x =</span> taux_emploi)) <span class="sc">+</span></span>
 <span id="cb271-2"><a href="exercice-de-synthèse.html#cb271-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span> () <span class="sc">+</span></span>
 <span id="cb271-3"><a href="exercice-de-synthèse.html#cb271-3" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span> (<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>))</span></code></pre></div>
-<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-93-1.png" width="672" /></p>
+<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-93-1.png" alt="" width="672" /></p>
 <div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="exercice-de-synthèse.html#cb272-1" tabindex="-1"></a><span class="fu">ggplot</span> (<span class="at">data =</span> data_p4, <span class="fu">aes</span> (<span class="at">x =</span> densite_pop)) <span class="sc">+</span></span>
 <span id="cb272-2"><a href="exercice-de-synthèse.html#cb272-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span> () <span class="sc">+</span></span>
 <span id="cb272-3"><a href="exercice-de-synthèse.html#cb272-3" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span> (<span class="at">trans =</span> <span class="st">&#39;log&#39;</span>, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">100</span>,<span class="dv">1000</span>))</span></code></pre></div>
-<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-93-2.png" width="672" /></p>
+<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-93-2.png" alt="" width="672" /></p>
 <p>Ces distributions ne sont pas trop normales à première vue. Mais en testant ?</p>
 <div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb273-1"><a href="exercice-de-synthèse.html#cb273-1" tabindex="-1"></a><span class="fu">shapiro.test</span> (data_p4<span class="sc">$</span>taux_emploi)</span></code></pre></div>
 <pre><code>## 
@@ -807,7 +808,7 @@ Réfléchir aux questions :
 <span id="cb277-4"><a href="exercice-de-synthèse.html#cb277-4" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span> (<span class="at">trans =</span> <span class="st">&#39;log10&#39;</span>) <span class="sc">+</span></span>
 <span id="cb277-5"><a href="exercice-de-synthèse.html#cb277-5" tabindex="-1"></a>  <span class="fu">geom_smooth</span> (<span class="at">color =</span> <span class="st">&#39;orange&#39;</span>)<span class="sc">+</span></span>
 <span id="cb277-6"><a href="exercice-de-synthèse.html#cb277-6" tabindex="-1"></a>  <span class="fu">geom_smooth</span> (<span class="at">method =</span> <span class="st">&#39;lm&#39;</span>, <span class="at">color =</span> <span class="st">&#39;blue&#39;</span>)</span></code></pre></div>
-<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-95-1.png" width="672" /></p>
+<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-95-1.png" alt="" width="672" /></p>
 <div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb278-1"><a href="exercice-de-synthèse.html#cb278-1" tabindex="-1"></a><span class="fu">cor</span> (<span class="at">x =</span> data_p4<span class="sc">$</span>taux_emploi,</span>
 <span id="cb278-2"><a href="exercice-de-synthèse.html#cb278-2" tabindex="-1"></a>     <span class="at">y =</span> data_p4<span class="sc">$</span>densite,</span>
 <span id="cb278-3"><a href="exercice-de-synthèse.html#cb278-3" tabindex="-1"></a>     <span class="at">use =</span> <span class="st">&quot;pairwise.complete.obs&quot;</span>,</span>
@@ -838,7 +839,7 @@ Réfléchir aux questions :
 ## Multiple R-squared:  0.133,  Adjusted R-squared:  0.1323 
 ## F-statistic: 207.8 on 1 and 1355 DF,  p-value: &lt; 2.2e-16</code></pre>
 <div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="exercice-de-synthèse.html#cb282-1" tabindex="-1"></a><span class="fu">plot</span> (modele)</span></code></pre></div>
-<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-96-1.png" width="672" /><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-96-2.png" width="672" /><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-96-3.png" width="672" /><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-96-4.png" width="672" /></p>
+<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-96-1.png" alt="" width="672" /><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-96-2.png" alt="" width="672" /><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-96-3.png" alt="" width="672" /><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-96-4.png" alt="" width="672" /></p>
 <div class="sourceCode" id="cb283"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb283-1"><a href="exercice-de-synthèse.html#cb283-1" tabindex="-1"></a>residus <span class="ot">&lt;-</span> modele<span class="sc">$</span>residuals <span class="sc">%&gt;%</span> </span>
 <span id="cb283-2"><a href="exercice-de-synthèse.html#cb283-2" tabindex="-1"></a>  <span class="fu">as.data.frame</span> () <span class="sc">%&gt;%</span> </span>
 <span id="cb283-3"><a href="exercice-de-synthèse.html#cb283-3" tabindex="-1"></a>  <span class="fu">rename</span> (<span class="at">valeurs_residus =</span> <span class="st">&#39;.&#39;</span>)</span>
@@ -846,7 +847,7 @@ Réfléchir aux questions :
 <span id="cb283-5"><a href="exercice-de-synthèse.html#cb283-5" tabindex="-1"></a><span class="fu">ggplot</span> (<span class="at">data =</span> residus, <span class="fu">aes</span> (<span class="at">x =</span> valeurs_residus)) <span class="sc">+</span></span>
 <span id="cb283-6"><a href="exercice-de-synthèse.html#cb283-6" tabindex="-1"></a>  <span class="fu">geom_histogram</span> () <span class="sc">+</span></span>
 <span id="cb283-7"><a href="exercice-de-synthèse.html#cb283-7" tabindex="-1"></a>  <span class="fu">geom_vline</span> (<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">&#39;red&#39;</span>)</span></code></pre></div>
-<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-96-5.png" width="672" /></p>
+<p><img src="Statistiques-descriptives_files/figure-html/unnamed-chunk-96-5.png" alt="" width="672" /></p>
 <p>Les graphiques montrent que :</p>
 <ul>
 <li><p>on a à peu près indépendance entre les valeurs prédites et les résidus</p></li>
