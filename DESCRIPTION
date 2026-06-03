@@ -25,5 +25,6 @@ Imports:
   visNetwork
 Remotes: 
     maeltheuliere/COGiter
+    haleyjeppson/ggmosaic
 License: MIT
 
